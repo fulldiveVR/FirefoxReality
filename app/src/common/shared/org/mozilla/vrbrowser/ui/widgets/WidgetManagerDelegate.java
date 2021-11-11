@@ -83,7 +83,9 @@ public interface WidgetManagerDelegate {
     void keyboardDismissed();
     void updateEnvironment();
     void updatePointerColor();
-    void showVRVideo(int aWindowHandle, @VideoProjectionMenuWidget.VideoProjectionFlags int aVideoProjection);
+    //MOHUS
+    //void showVRVideo(int aWindowHandle, @VideoProjectionMenuWidget.VideoProjectionFlags int aVideoProjection);
+    void showVRVideo(int aWindowHandle, int aVideoProjection);
     void hideVRVideo();
     void recenterUIYaw(@YawTarget int target);
     void setCylinderDensity(float aDensity);

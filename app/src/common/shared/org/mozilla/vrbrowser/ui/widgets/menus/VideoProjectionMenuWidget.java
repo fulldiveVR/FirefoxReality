@@ -19,10 +19,11 @@ import java.util.stream.IntStream;
 
 public class VideoProjectionMenuWidget extends MenuWidget {
 
-    @IntDef(value = { VIDEO_PROJECTION_NONE, VIDEO_PROJECTION_3D_SIDE_BY_SIDE, VIDEO_PROJECTION_360,
-                      VIDEO_PROJECTION_360_STEREO, VIDEO_PROJECTION_180,
-                      VIDEO_PROJECTION_180_STEREO_LEFT_RIGHT, VIDEO_PROJECTION_180_STEREO_TOP_BOTTOM })
-    public @interface VideoProjectionFlags {}
+    //MOHUS
+    //@IntDef(value = { VIDEO_PROJECTION_NONE, VIDEO_PROJECTION_3D_SIDE_BY_SIDE, VIDEO_PROJECTION_360,
+    //                  VIDEO_PROJECTION_360_STEREO, VIDEO_PROJECTION_180,
+    //                  VIDEO_PROJECTION_180_STEREO_LEFT_RIGHT, VIDEO_PROJECTION_180_STEREO_TOP_BOTTOM })
+    //public @interface VideoProjectionFlags {}
 
     public static final int VIDEO_PROJECTION_NONE = -1;
     public static final int VIDEO_PROJECTION_3D_SIDE_BY_SIDE = 0;
@@ -33,20 +34,30 @@ public class VideoProjectionMenuWidget extends MenuWidget {
     public static final int VIDEO_PROJECTION_180_STEREO_TOP_BOTTOM = 5;
 
     public interface Delegate {
-        void onVideoProjectionClick(@VideoProjectionFlags int aProjection);
+        //MOHUS
+        void onVideoProjectionClick(int aProjection);
     }
 
     class ProjectionMenuItem extends MenuItem {
-        @VideoProjectionFlags int projection;
-        public ProjectionMenuItem(@VideoProjectionFlags int aProjection, String aString, int aImage) {
-            super(aString, aImage, () -> handleClick(aProjection));
+        //MOHUS
+        //@VideoProjectionFlags int projection;
+        int projection;
+        public ProjectionMenuItem(int aProjection, String aString, int aImage) {
+            super(aString, aImage, new Runnable() {
+                public void run() {
+                    handleClick(aProjection);
+                }
+            });
+            //}() -> handleClick(aProjection));
             projection = aProjection;
         }
     }
 
     ArrayList<MenuItem> mItems;
     Delegate mDelegate;
-    @VideoProjectionFlags int mSelectedProjection = VIDEO_PROJECTION_3D_SIDE_BY_SIDE;
+    //MOHUS
+    //@VideoProjectionFlags int mSelectedProjection = VIDEO_PROJECTION_3D_SIDE_BY_SIDE;
+    int mSelectedProjection = VIDEO_PROJECTION_3D_SIDE_BY_SIDE;
 
     public VideoProjectionMenuWidget(Context aContext) {
         super(aContext, R.layout.menu);
@@ -116,18 +127,24 @@ public class VideoProjectionMenuWidget extends MenuWidget {
         mWidgetPlacement.height += mBorderWidth * 2;
     }
 
-    private void handleClick(@VideoProjectionFlags int aVideoProjection) {
+    //MOHUS
+    //private void handleClick(@VideoProjectionFlags int aVideoProjection) {
+    private void handleClick(int aVideoProjection) {
         mSelectedProjection = aVideoProjection;
         if (mDelegate != null) {
             mDelegate.onVideoProjectionClick(aVideoProjection);
         }
     }
 
-    public @VideoProjectionFlags int getSelectedProjection() {
+    //MOHUS
+    //public @VideoProjectionFlags int getSelectedProjection() {
+    public int getSelectedProjection() {
         return mSelectedProjection;
     }
 
-    public void setSelectedProjection(@VideoProjectionFlags int aProjection) {
+    //MOHUS
+    //public void setSelectedProjection(@VideoProjectionFlags int aProjection) {
+    public void setSelectedProjection(int aProjection) {
         mSelectedProjection = aProjection;
         int index = IntStream.range(0, mItems.size())
                 .filter(i -> ((ProjectionMenuItem)mItems.get(i)).projection == aProjection)
@@ -136,7 +153,9 @@ public class VideoProjectionMenuWidget extends MenuWidget {
         setSelectedItem(index);
     }
 
-    public static @VideoProjectionFlags int getAutomaticProjection(String aURL, AtomicBoolean autoEnter) {
+    //MOHUS
+    //public static @VideoProjectionFlags int getAutomaticProjection(String aURL, AtomicBoolean autoEnter) {
+    public static int getAutomaticProjection(String aURL, AtomicBoolean autoEnter) {
         if (aURL == null) {
             return VIDEO_PROJECTION_NONE;
         }

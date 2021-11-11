@@ -110,7 +110,9 @@ public class NavigationBarWidget extends UIWidget implements GeckoSession.Naviga
     private BrightnessMenuWidget mBrightnessWidget;
     private MediaControlsWidget mMediaControlsWidget;
     private Media mFullScreenMedia;
-    private @VideoProjectionMenuWidget.VideoProjectionFlags int mAutoSelectedProjection = VIDEO_PROJECTION_NONE;
+    //MOHUS
+    //private @VideoProjectionMenuWidget.VideoProjectionFlags int mAutoSelectedProjection = VIDEO_PROJECTION_NONE;
+    private int mAutoSelectedProjection = VideoProjectionMenuWidget.VIDEO_PROJECTION_NONE;
     private HamburgerMenuWidget mHamburgerMenu;
     private QuickPermissionWidget mQuickPermissionWidget;
     private SendTabDialogWidget mSendTabDialog;
@@ -786,7 +788,9 @@ public class NavigationBarWidget extends UIWidget implements GeckoSession.Naviga
         mWidgetManager.updateWidget(mAttachedWindow);
     }
 
-    private void enterVRVideo(@VideoProjectionMenuWidget.VideoProjectionFlags int aProjection) {
+    //MOHUS
+    //private void enterVRVideo(@VideoProjectionMenuWidget.VideoProjectionFlags int aProjection) {
+    private void enterVRVideo(int aProjection) {
         if (mViewModel.getIsInVRVideo().getValue().get()) {
             return;
         }
@@ -844,7 +848,8 @@ public class NavigationBarWidget extends UIWidget implements GeckoSession.Naviga
         boolean composited = mProjectionMenu.getPlacement().composited;
         mProjectionMenu.getPlacement().copyFrom(mProjectionMenuPlacement);
         mProjectionMenu.getPlacement().composited = composited;
-        mProjectionMenu.setSelectedProjection(VIDEO_PROJECTION_NONE);
+        //MOHUS
+        mProjectionMenu.setSelectedProjection(VideoProjectionMenuWidget.VIDEO_PROJECTION_NONE);
         mWidgetManager.updateWidget(mProjectionMenu);
         closeFloatingMenus();
         mWidgetManager.setControllersVisible(true);
