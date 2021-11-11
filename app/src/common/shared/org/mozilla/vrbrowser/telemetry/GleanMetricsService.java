@@ -86,8 +86,15 @@ public class GleanMetricsService {
     }
 
     public static void startPageLoadTime(String aUrl) {
+        //MOHUS
+        if (aUrl == null) {
+            Log.e(LOGTAG, "$$$$$ startPageLoadTime(URL) URL=NULL !!!");
+        }
+        else {
+            Log.e(LOGTAG, "$$$$$ startPageLoadTime(URL) URL="+aUrl);
+        }
         GleanTimerId pageLoadingTimerId = Pages.INSTANCE.pageLoad().start();
-        loadingTimerId.put(aUrl, pageLoadingTimerId);
+        //loadingTimerId.put(aUrl, pageLoadingTimerId);
     }
 
     public static void stopPageLoadTimeWithURI(String uri) {
