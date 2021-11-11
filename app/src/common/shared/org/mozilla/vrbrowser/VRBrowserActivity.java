@@ -1605,8 +1605,10 @@ public class VRBrowserActivity extends PlatformActivity implements WidgetManager
         });
     }
 
+    //MOHUS
+    //public void showVRVideo(final int aWindowHandle, final @VideoProjectionMenuWidget.VideoProjectionFlags int aVideoProjection) {
     @Override
-    public void showVRVideo(final int aWindowHandle, final @VideoProjectionMenuWidget.VideoProjectionFlags int aVideoProjection) {
+    public void showVRVideo(final int aWindowHandle, final int aVideoProjection) {
         queueRunnable(() -> showVRVideoNative(aWindowHandle, aVideoProjection));
     }
 
