@@ -490,6 +490,10 @@ dependencies {
     // Pico
     picovrImplementation fileTree(dir: "${project.rootDir}/third_party/picovr/", include: ['*.aar'])
     picovrStoreImplementation fileTree(dir: "${project.rootDir}/third_party/picovr/", include: ['*.aar'])
+
+
+    //MOHUS
+    compile 'com.htc.vr:wvr_client:+'
 }
 
 if (findProject(':servo')) {
@@ -504,6 +508,7 @@ if (findProject(':wavesdk')) {
         wavevrStoreImplementation fileTree(dir: "${project.rootDir}/third_party/wavesdk/", include: ['*.aar'])
     }
 }
+
 
 dependencies {
 
