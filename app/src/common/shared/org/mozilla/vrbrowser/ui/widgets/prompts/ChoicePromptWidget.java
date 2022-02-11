@@ -19,7 +19,7 @@ import androidx.annotation.NonNull;
 
 import org.mozilla.geckoview.GeckoSession.PromptDelegate.ChoicePrompt.Choice;
 import org.mozilla.geckoview.GeckoSession.PromptDelegate.ChoicePrompt.Type;
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.audio.AudioEngine;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;
 

@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.appcompat.widget.AppCompatToggleButton;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.audio.AudioEngine;
 
 public class SingleEditSetting extends RelativeLayout {

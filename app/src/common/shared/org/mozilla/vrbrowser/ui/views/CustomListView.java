@@ -7,7 +7,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ListView;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 
 public class CustomListView extends ListView {
     public CustomListView(Context context) {

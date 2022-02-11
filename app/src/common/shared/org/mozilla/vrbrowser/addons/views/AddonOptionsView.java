@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
 import org.mozilla.vrbrowser.VRBrowserApplication;
 import org.mozilla.vrbrowser.addons.adapters.AddonsViewAdapter;
@@ -18,7 +18,7 @@ import org.mozilla.vrbrowser.addons.delegates.AddonOptionsViewDelegate;
 import org.mozilla.vrbrowser.addons.delegates.AddonsDelegate;
 import org.mozilla.vrbrowser.browser.Addons;
 import org.mozilla.vrbrowser.browser.engine.Session;
-import org.mozilla.vrbrowser.databinding.AddonOptionsBinding;
+import com.htc.vivebrowser.databinding.AddonOptionsBinding;
 import org.mozilla.vrbrowser.ui.widgets.WidgetManagerDelegate;
 import org.mozilla.vrbrowser.ui.widgets.prompts.PromptData;
 import org.mozilla.vrbrowser.utils.SystemUtils;

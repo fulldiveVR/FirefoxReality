@@ -10,7 +10,7 @@ import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 
 public class TrayViewModel extends AndroidViewModel {
 

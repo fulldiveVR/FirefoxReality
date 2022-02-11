@@ -8,7 +8,7 @@ package org.mozilla.vrbrowser.ui.widgets.dialogs;
 import android.content.Context;
 import android.util.Log;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.VRBrowserApplication;
 import org.mozilla.vrbrowser.browser.Accounts;
 import org.mozilla.vrbrowser.browser.SettingsStore;

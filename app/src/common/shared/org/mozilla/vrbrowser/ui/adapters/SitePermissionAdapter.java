@@ -13,8 +13,8 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
-import org.mozilla.vrbrowser.databinding.SitePermissionItemBinding;
+import com.htc.vivebrowser.R;
+import com.htc.vivebrowser.databinding.SitePermissionItemBinding;
 import org.mozilla.vrbrowser.db.SitePermission;
 import org.mozilla.vrbrowser.ui.callbacks.PermissionSiteItemCallback;
 import org.mozilla.vrbrowser.utils.SystemUtils;

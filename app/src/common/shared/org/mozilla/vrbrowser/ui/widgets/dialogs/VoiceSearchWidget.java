@@ -27,13 +27,13 @@ import com.mozilla.speechlibrary.SpeechService;
 import com.mozilla.speechlibrary.SpeechServiceSettings;
 import com.mozilla.speechlibrary.stt.STTResult;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
 import org.mozilla.vrbrowser.VRBrowserApplication;
 import org.mozilla.vrbrowser.browser.SettingsStore;
 import org.mozilla.vrbrowser.browser.engine.EngineProvider;
 import org.mozilla.vrbrowser.browser.engine.SessionStore;
-import org.mozilla.vrbrowser.databinding.VoiceSearchDialogBinding;
+import com.htc.vivebrowser.databinding.VoiceSearchDialogBinding;
 import org.mozilla.vrbrowser.ui.widgets.WidgetManagerDelegate;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;
 import org.mozilla.vrbrowser.utils.DeviceType;

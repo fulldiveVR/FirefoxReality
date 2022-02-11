@@ -9,7 +9,7 @@ import org.mozilla.geckoview.ContentBlocking
 import org.mozilla.geckoview.GeckoRuntime
 import org.mozilla.geckoview.GeckoRuntimeSettings
 import org.mozilla.geckoview.GeckoWebExecutor
-import org.mozilla.vrbrowser.BuildConfig
+import com.htc.vivebrowser.BuildConfig
 import org.mozilla.vrbrowser.browser.SettingsStore
 import org.mozilla.vrbrowser.browser.content.TrackingProtectionPolicy
 import org.mozilla.vrbrowser.browser.content.TrackingProtectionStore

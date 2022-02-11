@@ -7,7 +7,7 @@ package org.mozilla.vrbrowser.ui.widgets.dialogs;
 
 import android.content.Context;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.utils.SystemUtils;
 
 public class RestartDialogWidget extends PromptDialogWidget {

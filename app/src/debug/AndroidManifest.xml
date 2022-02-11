@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.mozilla.vrbrowser">
+    package="com.htc.vivebrowser">
 
-    <application android:name=".VRBrowserApplication">
-        <activity android:name=".VRBrowserActivity">
+    <application android:name="org.mozilla.vrbrowser.VRBrowserApplication">
+        <activity android:name="org.mozilla.vrbrowser.VRBrowserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

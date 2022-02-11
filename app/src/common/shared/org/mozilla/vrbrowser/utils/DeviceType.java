@@ -4,7 +4,7 @@ import android.util.Log;
 
 import androidx.annotation.IntDef;
 
-import org.mozilla.vrbrowser.BuildConfig;
+import com.htc.vivebrowser.BuildConfig;
 
 public class DeviceType {
     // These values need to match those in Device.h

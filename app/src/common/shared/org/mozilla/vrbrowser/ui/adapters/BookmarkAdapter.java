@@ -14,10 +14,10 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
-import org.mozilla.vrbrowser.databinding.BookmarkItemBinding;
-import org.mozilla.vrbrowser.databinding.BookmarkItemFolderBinding;
-import org.mozilla.vrbrowser.databinding.BookmarkSeparatorBinding;
+import com.htc.vivebrowser.R;
+import com.htc.vivebrowser.databinding.BookmarkItemBinding;
+import com.htc.vivebrowser.databinding.BookmarkItemFolderBinding;
+import com.htc.vivebrowser.databinding.BookmarkSeparatorBinding;
 import org.mozilla.vrbrowser.ui.callbacks.BookmarkItemCallback;
 import org.mozilla.vrbrowser.ui.callbacks.BookmarkItemFolderCallback;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;

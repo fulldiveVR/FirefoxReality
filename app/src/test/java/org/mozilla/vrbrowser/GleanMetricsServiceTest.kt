@@ -9,7 +9,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.mozilla.vrbrowser.GleanMetrics.*
+import com.htc.vivebrowser.GleanMetrics.*
 import org.mozilla.vrbrowser.telemetry.GleanMetricsService
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config

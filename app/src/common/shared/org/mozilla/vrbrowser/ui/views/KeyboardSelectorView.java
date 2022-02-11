@@ -9,7 +9,7 @@ import android.widget.GridLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;
 
 import java.util.ArrayList;

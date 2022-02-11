@@ -24,8 +24,8 @@ import mozilla.components.feature.addons.update.GlobalAddonDependencyProvider
 import mozilla.components.support.base.log.logger.Logger
 import mozilla.components.support.webextensions.WebExtensionSupport
 import org.mozilla.geckoview.GeckoSession
-import org.mozilla.vrbrowser.BuildConfig
-import org.mozilla.vrbrowser.R
+import com.htc.vivebrowser.BuildConfig
+import com.htc.vivebrowser.R
 import org.mozilla.vrbrowser.addons.views.AddonsListView
 import org.mozilla.vrbrowser.browser.adapter.ComponentsAdapter
 import org.mozilla.vrbrowser.browser.components.GeckoEngineSession

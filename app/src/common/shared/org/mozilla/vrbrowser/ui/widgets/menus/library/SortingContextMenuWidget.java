@@ -5,7 +5,7 @@ import android.content.res.Configuration;
 
 import androidx.annotation.IntDef;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.browser.SettingsStore;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;
 import org.mozilla.vrbrowser.ui.widgets.menus.MenuWidget;

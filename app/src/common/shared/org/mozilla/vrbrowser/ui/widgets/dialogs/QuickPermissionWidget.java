@@ -8,8 +8,8 @@ import android.widget.CompoundButton;
 
 import androidx.databinding.DataBindingUtil;
 
-import org.mozilla.vrbrowser.R;
-import org.mozilla.vrbrowser.databinding.QuickPermissionDialogBinding;
+import com.htc.vivebrowser.R;
+import com.htc.vivebrowser.databinding.QuickPermissionDialogBinding;
 import org.mozilla.vrbrowser.db.SitePermission;
 import org.mozilla.vrbrowser.ui.widgets.UIWidget;
 import org.mozilla.vrbrowser.ui.widgets.WidgetManagerDelegate;

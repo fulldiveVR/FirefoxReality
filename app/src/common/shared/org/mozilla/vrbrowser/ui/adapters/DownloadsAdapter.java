@@ -14,8 +14,8 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
-import org.mozilla.vrbrowser.databinding.DownloadItemBinding;
+import com.htc.vivebrowser.R;
+import com.htc.vivebrowser.databinding.DownloadItemBinding;
 import org.mozilla.vrbrowser.downloads.Download;
 import org.mozilla.vrbrowser.ui.callbacks.DownloadItemCallback;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;

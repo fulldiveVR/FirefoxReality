@@ -17,9 +17,9 @@ import androidx.databinding.ObservableBoolean;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
-import org.mozilla.vrbrowser.databinding.TitleBarBinding;
+import com.htc.vivebrowser.databinding.TitleBarBinding;
 import org.mozilla.vrbrowser.ui.viewmodel.WindowViewModel;
 
 public class TitleBarWidget extends UIWidget {

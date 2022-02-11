@@ -97,6 +97,9 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
 
+import com.htc.vivebrowser.R;
+import com.htc.vivebrowser.BuildConfig;
+
 import static org.mozilla.vrbrowser.ui.widgets.UIWidget.REMOVE_WIDGET;
 
 public class VRBrowserActivity extends PlatformActivity implements WidgetManagerDelegate, ComponentCallbacks2, LifecycleOwner, ViewModelStoreOwner {

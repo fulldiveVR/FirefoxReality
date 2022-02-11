@@ -16,12 +16,12 @@ import androidx.annotation.NonNull;
 import androidx.core.text.HtmlCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
 import org.mozilla.vrbrowser.VRBrowserApplication;
 import org.mozilla.vrbrowser.addons.delegates.AddonsDelegate;
 import org.mozilla.vrbrowser.browser.Addons;
-import org.mozilla.vrbrowser.databinding.AddonOptionsDetailsBinding;
+import com.htc.vivebrowser.databinding.AddonOptionsDetailsBinding;
 import org.mozilla.vrbrowser.ui.widgets.WidgetManagerDelegate;
 import org.mozilla.vrbrowser.utils.SystemUtils;
 

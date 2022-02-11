@@ -7,11 +7,11 @@ import android.view.LayoutInflater;
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
 import org.mozilla.vrbrowser.addons.adapters.AddonsViewAdapter;
 import org.mozilla.vrbrowser.addons.delegates.AddonsDelegate;
-import org.mozilla.vrbrowser.databinding.AddonsBinding;
+import com.htc.vivebrowser.databinding.AddonsBinding;
 import org.mozilla.vrbrowser.ui.views.library.LibraryPanel;
 import org.mozilla.vrbrowser.ui.views.library.LibraryView;
 import org.mozilla.vrbrowser.utils.SystemUtils;

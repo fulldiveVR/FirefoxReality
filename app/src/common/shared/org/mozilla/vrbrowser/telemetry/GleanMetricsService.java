@@ -7,16 +7,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.UiThread;
 import androidx.annotation.VisibleForTesting;
 
-import org.mozilla.vrbrowser.BuildConfig;
-import org.mozilla.vrbrowser.GleanMetrics.Control;
-import org.mozilla.vrbrowser.GleanMetrics.Distribution;
-import org.mozilla.vrbrowser.GleanMetrics.FirefoxAccount;
-import org.mozilla.vrbrowser.GleanMetrics.Immersive;
-import org.mozilla.vrbrowser.GleanMetrics.Pages;
-import org.mozilla.vrbrowser.GleanMetrics.Pings;
-import org.mozilla.vrbrowser.GleanMetrics.Searches;
-import org.mozilla.vrbrowser.GleanMetrics.Url;
-import org.mozilla.vrbrowser.GleanMetrics.Windows;
+import com.htc.vivebrowser.BuildConfig;
+import com.htc.vivebrowser.GleanMetrics.Control;
+import com.htc.vivebrowser.GleanMetrics.Distribution;
+import com.htc.vivebrowser.GleanMetrics.FirefoxAccount;
+import com.htc.vivebrowser.GleanMetrics.Immersive;
+import com.htc.vivebrowser.GleanMetrics.Pages;
+import com.htc.vivebrowser.GleanMetrics.Pings;
+import com.htc.vivebrowser.GleanMetrics.Searches;
+import com.htc.vivebrowser.GleanMetrics.Url;
+import com.htc.vivebrowser.GleanMetrics.Windows;
 import org.mozilla.vrbrowser.browser.SettingsStore;
 import org.mozilla.vrbrowser.search.SearchEngineWrapper;
 import org.mozilla.vrbrowser.utils.DeviceType;
@@ -402,11 +402,11 @@ public class GleanMetricsService {
         }
 
         public static void openedCounter(@NonNull TabSource source) {
-            org.mozilla.vrbrowser.GleanMetrics.Tabs.INSTANCE.getOpened().get(source.name().toLowerCase()).add();
+            com.htc.vivebrowser.GleanMetrics.Tabs.INSTANCE.getOpened().get(source.name().toLowerCase()).add();
         }
 
         public static void activatedEvent() {
-            org.mozilla.vrbrowser.GleanMetrics.Tabs.INSTANCE.activated().add();
+            com.htc.vivebrowser.GleanMetrics.Tabs.INSTANCE.activated().add();
         }
     }
 }
