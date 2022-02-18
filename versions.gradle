@@ -55,7 +55,7 @@ versions.gson = "2.8.5"
 versions.robolectric = "4.2.1"
 versions.work = "2.2.0"
 versions.jna = "5.9.0"
-versions.wavevr = "3.99.41"
+versions.wavevr = "4.3.0-u05"
 ext.versions = versions
 
 def deps = [:]
