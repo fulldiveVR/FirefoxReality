@@ -367,8 +367,10 @@ struct DeviceDelegateWaveVR::State {
       uint32_t ctl_touch = WVR_GetInputDeviceCapability(controller.type, WVR_InputType_Touch);
       uint32_t ctl_analog = WVR_GetInputDeviceCapability(controller.type, WVR_InputType_Analog);
 
-      const bool bumperPressed = (controller.is6DoF) ? WVR_GetInputButtonState(controller.type, WVR_InputId_Alias1_Trigger)
-                                  : WVR_GetInputButtonState(controller.type, WVR_InputId_Alias1_Bumper);
+      // Flow fix MOHUS
+      //const bool bumperPressed = (controller.is6DoF) ? WVR_GetInputButtonState(controller.type, WVR_InputId_Alias1_Trigger)
+        //                          : WVR_GetInputButtonState(controller.type, WVR_InputId_Alias1_Bumper);
+      const bool bumperPressed = WVR_GetInputButtonState(controller.type, WVR_InputId_Alias1_Trigger);
 
       // ABXY buttons
       if (ctl_button & WVR_InputId_Alias1_A) {
