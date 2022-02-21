@@ -14,9 +14,9 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
-import org.mozilla.vrbrowser.databinding.HistoryItemBinding;
-import org.mozilla.vrbrowser.databinding.HistoryItemHeaderBinding;
+import com.htc.vivebrowser.R;
+import com.htc.vivebrowser.databinding.HistoryItemBinding;
+import com.htc.vivebrowser.databinding.HistoryItemHeaderBinding;
 import org.mozilla.vrbrowser.ui.callbacks.HistoryItemCallback;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;
 import org.mozilla.vrbrowser.utils.AnimationHelper;

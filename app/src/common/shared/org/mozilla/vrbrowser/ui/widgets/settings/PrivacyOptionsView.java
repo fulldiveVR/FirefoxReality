@@ -20,10 +20,10 @@ import androidx.databinding.DataBindingUtil;
 
 import org.mozilla.geckoview.GeckoSession;
 import org.mozilla.geckoview.StorageController;
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.browser.SettingsStore;
 import org.mozilla.vrbrowser.browser.engine.SessionStore;
-import org.mozilla.vrbrowser.databinding.OptionsPrivacyBinding;
+import com.htc.vivebrowser.databinding.OptionsPrivacyBinding;
 import org.mozilla.vrbrowser.ui.views.settings.RadioGroupSetting;
 import org.mozilla.vrbrowser.ui.views.settings.SwitchSetting;
 import org.mozilla.vrbrowser.ui.widgets.WidgetManagerDelegate;

@@ -11,11 +11,11 @@ import android.view.View;
 
 import androidx.databinding.DataBindingUtil;
 
-import org.mozilla.vrbrowser.BuildConfig;
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.BuildConfig;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.browser.SettingsStore;
 import org.mozilla.vrbrowser.browser.engine.SessionStore;
-import org.mozilla.vrbrowser.databinding.OptionsDeveloperBinding;
+import com.htc.vivebrowser.databinding.OptionsDeveloperBinding;
 import org.mozilla.vrbrowser.ui.views.settings.SwitchSetting;
 import org.mozilla.vrbrowser.ui.widgets.WidgetManagerDelegate;
 

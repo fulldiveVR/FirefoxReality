@@ -2,7 +2,7 @@ package org.mozilla.vrbrowser.ui.widgets.menus.library;
 
 import android.content.Context;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.ui.callbacks.HistoryContextMenuCallback;
 
 public class HistoryContextMenuWidget extends LibraryContextMenuWidget {

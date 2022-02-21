@@ -18,7 +18,7 @@ object GeolocationWrapper {
         val locationService = MozillaLocationService(
                 context,
                 EngineProvider.getDefaultClient(context),
-                org.mozilla.vrbrowser.BuildConfig.MLS_TOKEN
+                com.htc.vivebrowser.BuildConfig.MLS_TOKEN
         )
         CoroutineScope(Dispatchers.IO).launch {
             locationService.fetchRegion(true)?.run {
@@ -33,7 +33,7 @@ object GeolocationWrapper {
             val locationService = MozillaLocationService(
                     context,
                     EngineProvider.getDefaultClient(context),
-                    org.mozilla.vrbrowser.BuildConfig.MLS_TOKEN
+                    com.htc.vivebrowser.BuildConfig.MLS_TOKEN
             )
             locationService.fetchRegion(false)
         }

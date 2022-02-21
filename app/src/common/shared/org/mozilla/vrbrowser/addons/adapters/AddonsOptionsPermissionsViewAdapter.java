@@ -7,8 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
-import org.mozilla.vrbrowser.databinding.AddonOptionsPermissionsItemBinding;
+import com.htc.vivebrowser.R;
+import com.htc.vivebrowser.databinding.AddonOptionsPermissionsItemBinding;
 
 import java.util.ArrayList;
 import java.util.List;

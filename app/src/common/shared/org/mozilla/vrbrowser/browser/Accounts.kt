@@ -23,7 +23,7 @@ import mozilla.components.service.fxa.manager.SyncEnginesStorage
 import mozilla.components.service.fxa.sync.SyncReason
 import mozilla.components.service.fxa.sync.SyncStatusObserver
 import mozilla.components.service.fxa.sync.getLastSynced
-import org.mozilla.vrbrowser.R
+import com.htc.vivebrowser.R
 import org.mozilla.vrbrowser.VRBrowserApplication
 import org.mozilla.vrbrowser.telemetry.GleanMetricsService
 import org.mozilla.vrbrowser.utils.BitmapCache

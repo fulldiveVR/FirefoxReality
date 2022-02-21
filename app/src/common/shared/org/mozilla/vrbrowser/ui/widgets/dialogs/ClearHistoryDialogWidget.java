@@ -11,10 +11,10 @@ import android.view.LayoutInflater;
 
 import androidx.databinding.DataBindingUtil;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.browser.HistoryStore;
 import org.mozilla.vrbrowser.browser.engine.SessionStore;
-import org.mozilla.vrbrowser.databinding.ClearHistoryDialogBinding;
+import com.htc.vivebrowser.databinding.ClearHistoryDialogBinding;
 import org.mozilla.vrbrowser.utils.SystemUtils;
 
 import java.util.Calendar;

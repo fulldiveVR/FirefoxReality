@@ -2,7 +2,7 @@ package org.mozilla.vrbrowser.ui.keyboards;
 
 import android.content.Context;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.input.CustomKeyboard;
 import org.mozilla.vrbrowser.utils.StringUtils;
 

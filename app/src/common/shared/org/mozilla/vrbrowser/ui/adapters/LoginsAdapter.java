@@ -15,9 +15,9 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
-import org.mozilla.vrbrowser.databinding.OptionsSavedLoginItemBinding;
-import org.mozilla.vrbrowser.databinding.PromptSelectLoginItemBinding;
+import com.htc.vivebrowser.R;
+import com.htc.vivebrowser.databinding.OptionsSavedLoginItemBinding;
+import com.htc.vivebrowser.databinding.PromptSelectLoginItemBinding;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;
 import org.mozilla.vrbrowser.utils.AnimationHelper;
 import org.mozilla.vrbrowser.utils.SystemUtils;

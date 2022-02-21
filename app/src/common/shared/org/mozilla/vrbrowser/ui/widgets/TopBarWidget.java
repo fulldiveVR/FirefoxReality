@@ -17,10 +17,10 @@ import androidx.databinding.ObservableBoolean;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
 import org.mozilla.vrbrowser.audio.AudioEngine;
-import org.mozilla.vrbrowser.databinding.TopBarBinding;
+import com.htc.vivebrowser.databinding.TopBarBinding;
 import org.mozilla.vrbrowser.ui.viewmodel.WindowViewModel;
 
 public class TopBarWidget extends UIWidget {

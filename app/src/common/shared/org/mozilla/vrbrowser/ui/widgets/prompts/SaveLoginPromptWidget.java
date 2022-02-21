@@ -9,8 +9,8 @@ import android.view.LayoutInflater;
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 
-import org.mozilla.vrbrowser.R;
-import org.mozilla.vrbrowser.databinding.PromptSaveLoginBinding;
+import com.htc.vivebrowser.R;
+import com.htc.vivebrowser.databinding.PromptSaveLoginBinding;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;
 import org.mozilla.vrbrowser.ui.widgets.dialogs.UIDialog;
 

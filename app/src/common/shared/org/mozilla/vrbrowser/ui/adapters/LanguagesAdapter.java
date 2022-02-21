@@ -15,9 +15,9 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.VRBrowserApplication;
-import org.mozilla.vrbrowser.databinding.LanguageItemBinding;
+import com.htc.vivebrowser.databinding.LanguageItemBinding;
 import org.mozilla.vrbrowser.ui.callbacks.LanguageItemCallback;
 import org.mozilla.vrbrowser.utils.ViewUtils;
 

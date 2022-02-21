@@ -76,7 +76,7 @@ ext.gleanDocsDirectory = "$rootDir/docs"
 android {
     compileSdkVersion build_versions.target_sdk
     defaultConfig {
-        applicationId "org.mozilla.vrbrowser"
+        applicationId "com.htc.vivebrowser"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
         versionCode 1
@@ -106,10 +106,10 @@ android {
     }
 
     if (gradle.hasProperty('userProperties.taskclusterBuild')) {
-        project.archivesBaseName = "FirefoxReality-$defaultConfig.versionName-$generatedVersionCode"
+        project.archivesBaseName = "VIVEBrowser-$defaultConfig.versionName-$generatedVersionCode"
         defaultConfig.versionCode = generatedVersionCode
     } else {
-        project.archivesBaseName = "FirefoxReality"
+        project.archivesBaseName = "VIVEBrowser"
     }
 
     compileOptions {

@@ -12,9 +12,9 @@ import android.view.View;
 
 import androidx.databinding.DataBindingUtil;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.browser.engine.SessionStore;
-import org.mozilla.vrbrowser.databinding.OptionsLanguageContentBinding;
+import com.htc.vivebrowser.databinding.OptionsLanguageContentBinding;
 import org.mozilla.vrbrowser.ui.adapters.Language;
 import org.mozilla.vrbrowser.ui.adapters.LanguagesAdapter;
 import org.mozilla.vrbrowser.ui.callbacks.LanguageItemCallback;

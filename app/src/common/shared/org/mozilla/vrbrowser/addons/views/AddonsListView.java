@@ -12,13 +12,13 @@ import androidx.annotation.StringRes;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
 import org.mozilla.vrbrowser.addons.adapters.AddonsManagerAdapter;
 import org.mozilla.vrbrowser.addons.adapters.AddonsViewAdapter;
 import org.mozilla.vrbrowser.addons.delegates.AddonsDelegate;
 import org.mozilla.vrbrowser.browser.Addons;
-import org.mozilla.vrbrowser.databinding.AddonsListBinding;
+import com.htc.vivebrowser.databinding.AddonsListBinding;
 import org.mozilla.vrbrowser.ui.viewmodel.LibraryViewModel;
 import org.mozilla.vrbrowser.ui.widgets.WidgetManagerDelegate;
 import org.mozilla.vrbrowser.ui.widgets.dialogs.PromptDialogWidget;

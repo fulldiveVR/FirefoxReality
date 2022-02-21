@@ -87,6 +87,9 @@ import org.mozilla.vrbrowser.utils.ServoUtils;
 import org.mozilla.vrbrowser.utils.StringUtils;
 import org.mozilla.vrbrowser.utils.SystemUtils;
 
+import com.htc.vivebrowser.R;
+import com.htc.vivebrowser.BuildConfig;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;

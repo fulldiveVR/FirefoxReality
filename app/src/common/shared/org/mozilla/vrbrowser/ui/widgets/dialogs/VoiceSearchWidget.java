@@ -24,13 +24,13 @@ import androidx.databinding.DataBindingUtil;
 
 import com.mozilla.speechlibrary.SpeechResultCallback;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
 import org.mozilla.vrbrowser.VRBrowserApplication;
 import org.mozilla.vrbrowser.browser.SettingsStore;
 import org.mozilla.vrbrowser.browser.engine.EngineProvider;
 import org.mozilla.vrbrowser.browser.engine.SessionStore;
-import org.mozilla.vrbrowser.databinding.VoiceSearchDialogBinding;
+import com.htc.vivebrowser.databinding.VoiceSearchDialogBinding;
 import org.mozilla.vrbrowser.speech.SpeechRecognizer;
 import org.mozilla.vrbrowser.ui.widgets.WidgetManagerDelegate;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;

@@ -6,8 +6,8 @@ import android.view.LayoutInflater;
 
 import androidx.databinding.DataBindingUtil;
 
-import org.mozilla.vrbrowser.R;
-import org.mozilla.vrbrowser.databinding.SettingDialogBinding;
+import com.htc.vivebrowser.R;
+import com.htc.vivebrowser.databinding.SettingDialogBinding;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;
 
 public abstract class SettingDialogWidget extends UIDialog {

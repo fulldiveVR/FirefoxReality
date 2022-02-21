@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 
 import androidx.annotation.Nullable;
 

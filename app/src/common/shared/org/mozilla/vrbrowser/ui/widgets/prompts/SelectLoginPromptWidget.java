@@ -9,7 +9,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 
-import org.mozilla.vrbrowser.R;
+import com.htc.vivebrowser.R;
 import org.mozilla.vrbrowser.ui.adapters.LoginsAdapter;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;
 import org.mozilla.vrbrowser.ui.widgets.dialogs.UIDialog;
@@ -61,7 +61,7 @@ public class SelectLoginPromptWidget extends UIDialog implements LoginsAdapter.D
         mAdapter.setItems(mItems);
 
         // Inflate this data binding layout
-        org.mozilla.vrbrowser.databinding.PromptSelectLoginBinding mBinding = DataBindingUtil.inflate(inflater, R.layout.prompt_select_login, this, true);
+        com.htc.vivebrowser.databinding.PromptSelectLoginBinding mBinding = DataBindingUtil.inflate(inflater, R.layout.prompt_select_login, this, true);
         mBinding.settings.setOnClickListener(view -> {
             if (mPromptDelegate != null) {
                 mPromptDelegate.onSettingsClicked();

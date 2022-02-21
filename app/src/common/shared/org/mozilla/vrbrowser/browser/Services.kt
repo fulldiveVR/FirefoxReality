@@ -26,7 +26,7 @@ import mozilla.components.support.rustlog.RustLog
 import org.mozilla.geckoview.AllowOrDeny
 import org.mozilla.geckoview.GeckoResult
 import org.mozilla.geckoview.GeckoSession
-import org.mozilla.vrbrowser.R
+import com.htc.vivebrowser.R
 import org.mozilla.vrbrowser.VRBrowserActivity
 import org.mozilla.vrbrowser.browser.engine.EngineProvider
 import org.mozilla.vrbrowser.telemetry.GleanMetricsService
