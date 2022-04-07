@@ -13,11 +13,20 @@ buildscript {
     }
     repositories {
         google()
+        jcenter()
     }
 }
 
 allprojects {
     addRepos(repositories)
+    repositories {
+        google()
+        jcenter()
+        maven {
+            // assign your wavevr local respository
+            url "$rootDir/third_party/wavesdk/repo"
+        }
+    }
 }
 
 task clean(type: Delete) {
