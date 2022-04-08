@@ -136,6 +136,7 @@
                         <org.mozilla.vrbrowser.ui.views.HoneycombButton
                             android:id="@+id/displayButton"
                             style="?attr/honeycombButtonStyle"
+                            android:layout_marginStart="4dp"
                             app:honeycombButtonIcon="@drawable/ic_settings_display"
                             app:honeycombButtonText="@string/settings_display"
                             app:honeycombButtonTextSize="@dimen/settings_main_button_text_width" />
@@ -143,6 +144,7 @@
                         <org.mozilla.vrbrowser.ui.views.HoneycombButton
                             android:id="@+id/privacyButton"
                             style="?attr/honeycombButtonStyle"
+                            android:layout_marginStart="4dp"
                             app:honeycombButtonIcon="@drawable/ic_settings_privacypolicy"
                             app:honeycombButtonText="@string/settings_privacy_security"
                             app:honeycombButtonTextSize="@dimen/settings_main_button_text_width" />
@@ -150,6 +152,7 @@
                         <org.mozilla.vrbrowser.ui.views.HoneycombButton
                             android:id="@+id/developerOptionsButton"
                             style="?attr/honeycombButtonStyle"
+                            android:layout_marginStart="4dp"
                             app:honeycombButtonIcon="@drawable/ic_settings_developeroptions"
                             app:honeycombButtonText="@string/settings_developer_options"
                             app:honeycombButtonTextSize="@dimen/settings_main_button_text_width" />
@@ -162,7 +165,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/first_row"
                         android:layout_marginStart="65dp"
-                        android:layout_marginTop="-28dp"
+                        android:layout_marginTop="-4dp"
                         android:orientation="horizontal">
 
                         <org.mozilla.vrbrowser.ui.views.HoneycombButton
@@ -175,6 +178,7 @@
                         <org.mozilla.vrbrowser.ui.views.HoneycombButton
                             android:id="@+id/controllerOptionsButton"
                             style="?attr/honeycombButtonStyle"
+                            android:layout_marginStart="4dp"
                             app:honeycombButtonIcon="@drawable/ic_settings_controlleroptions"
                             app:honeycombButtonIconOculus3dof="@drawable/ic_settings_controlleroptions_oculusvr_3dof"
                             app:honeycombButtonIconOculus6dof="@drawable/ic_settings_controlleroptions_oculusvr_6dof"
@@ -184,6 +188,7 @@
                         <org.mozilla.vrbrowser.ui.views.HoneycombButton
                             android:id="@+id/helpButton"
                             style="?attr/honeycombButtonStyle"
+                            android:layout_marginStart="4dp"
                             app:honeycombButtonIcon="@drawable/ic_settings_help"
                             app:honeycombButtonText="@string/settings_help"
                             app:honeycombButtonTextSize="@dimen/settings_main_button_text_width" />

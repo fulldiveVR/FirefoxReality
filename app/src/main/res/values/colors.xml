@@ -15,8 +15,8 @@
     <color name="white_blur">#80ffffff</color>
     <color name="fire">#ee513f</color>
     <color name="spark">#f7ce4d</color>
-    <color name="eggplant">#45236d</color>
-    <color name="eggplant_blur">#8045236d</color>
+    <color name="eggplant">#023D74</color>
+    <color name="eggplant_blur">#80023D74</color>
     <color name="ash">#111213</color>
     <color name="void_color">#232426</color>
     <color name="void_color_blur">#80232426</color>
@@ -27,11 +27,11 @@
     <color name="fog_url_protocol">#c2c6cb</color>
     <color name="grass">#00B3E3</color>
     <color name="forest">#579334</color>
-    <color name="jade">#336016</color>
+    <color name="jade">#007393</color>
     <color name="dessert">#BB5656</color>
     <color name="dessert_blur">#80ef4136</color>
     <color name="tomato">#cc332f</color>
-    <color name="garnet">#932525</color>
+    <color name="garnet">#8B4646</color>
     <color name="blackberry">#25003e</color>
     <color name="blackberry_blur">#8025003e</color>
     <color name="tangerine">#ff921e</color>
