@@ -332,7 +332,7 @@
     <!-- The string is used in the keyboard space bar to show the current keyboard language and in
     the keyboard languages panel list. -->
     <string name="settings_language_norwegian">ノルウェー語</string>
-  
+
     <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
     changes the app and the language of the speech-recognition-based search to 'Norwegian (Bokmaal)'. -->
     <string name="settings_language_norwegian_bokmaal">ノルウェー語 (ブークモール)</string>
@@ -340,7 +340,7 @@
     <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
     changes the app and the language of the speech-recognition-based search to 'Norwegian (Nynorsk)'. -->
     <string name="settings_language_norwegian_nynorsk">ノルウェー語 (ニーノシュク)</string>
-  
+
     <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
     changes the app and the language of the speech-recognition-based search to 'Swedish'.
     The string is also used in the keyboard space bar to show the current keyboard language and in
@@ -352,7 +352,7 @@
     The string is also used in the keyboard space bar to show the current keyboard language and in
     the keyboard languages panel list. -->
     <string name="settings_language_finnish">フィンランド語</string>
-  
+
     <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
     changes the app and the language of the speech-recognition-based search to 'Dutch'.
     The string is also used in the keyboard space bar to show the current keyboard language and in
@@ -1449,6 +1449,7 @@
     <!-- This string is for the tooltip that appears upon hovering the 'Home' button in the browser's navigation bar.
          'Home' refers to the browser's start page (e.g., the Firefox Reality Home Page). -->
     <string name="home_tooltip">ホーム</string>
+    <string name="vive_tooltip">Vive Connect</string>
 
     <!-- This string is for the tooltip that appears upon hovering the 'Voice Search' (microphone) button in the
          browser's navigation bar. 'Voice Search' refers to the browser's system for searching the Web using
@@ -1945,7 +1946,7 @@ the Select` button. When clicked it closes all the previously selected tabs -->
          '%1$s' will be replaced at runtime with the status of the setting.
          '%2$s' will be replaced at runtime with the Learn More page link. -->
     <string name="tracking_dialog_message"><![CDATA[このサイトでの強化型トラッキング防止は %1$s です。 (<a href="%2$s">詳細情報</a>)]]></string>
-  
+
     <!-- This string is displayed in the on button of the quick Tracking Protection dialog when it's in enabled state. It's accessed from the Tracking Protection icon in the URL bar. -->
     <string name="tracking_dialog_button_on">オン</string>
 
@@ -1971,11 +1972,11 @@ the Select` button. When clicked it closes all the previously selected tabs -->
          explicitly enable/Disable the DRM setting yet.
          '%1$s' will be replaced at runtime with the Learn More page link. -->
     <string name="drm_first_use_body_v2"><![CDATA[DRM を許可すると、サイトを開くたびにサイトがこの端末を識別できるようになります。<a href="%1$s">詳細情報</a>]]></string>
-  
+
     <!-- This string is displayed in the enable button that is displayed inside the dialog that is displayed the first time a user access
          access DRM content if they haven't explicitly enable/Disable the DRM setting yet. -->
     <string name="drm_first_use_allow">許可する</string>
-  
+
     <!-- This string is displayed in the do not enable button that is displayed inside the dialog that is displayed the first time a user access
          access DRM content if they haven't explicitly enable/Disable the DRM setting yet. -->
     <string name="drm_first_use_do_not_allow">許可しない</string>

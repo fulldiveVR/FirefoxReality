@@ -316,7 +316,7 @@
     The string is also used in the keyboard space bar to show the current keyboard language and in
     the keyboard languages panel list. -->
     <string name="settings_language_russian">러시아어</string>
-  
+
     <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
     changes the app and the language of the speech-recognition-based search to 'Polish'.
     The string is also used in the keyboard space bar to show the current keyboard language and in
@@ -332,7 +332,7 @@
     <!-- The string is used in the keyboard space bar to show the current keyboard language and in
     the keyboard languages panel list. -->
     <string name="settings_language_norwegian">노르웨이어</string>
-  
+
     <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
     changes the app and the language of the speech-recognition-based search to 'Norwegian (Bokmaal)'. -->
     <string name="settings_language_norwegian_bokmaal">노르웨이어 (보크말)</string>
@@ -340,7 +340,7 @@
     <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
     changes the app and the language of the speech-recognition-based search to 'Norwegian (Nynorsk)'. -->
     <string name="settings_language_norwegian_nynorsk">노르웨어어 (노르딕)</string>
-  
+
     <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
     changes the app and the language of the speech-recognition-based search to 'Swedish'.
     The string is also used in the keyboard space bar to show the current keyboard language and in
@@ -352,7 +352,7 @@
     The string is also used in the keyboard space bar to show the current keyboard language and in
     the keyboard languages panel list. -->
     <string name="settings_language_finnish">핀란드어</string>
-  
+
     <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
     changes the app and the language of the speech-recognition-based search to 'Dutch'.
     The string is also used in the keyboard space bar to show the current keyboard language and in
@@ -1450,6 +1450,7 @@
     <!-- This string is for the tooltip that appears upon hovering the 'Home' button in the browser's navigation bar.
          'Home' refers to the browser's start page (e.g., the Firefox Reality Home Page). -->
     <string name="home_tooltip">홈</string>
+    <string name="vive_tooltip">Vive Connect</string>
 
     <!-- This string is for the tooltip that appears upon hovering the 'Voice Search' (microphone) button in the
          browser's navigation bar. 'Voice Search' refers to the browser's system for searching the Web using
@@ -1946,7 +1947,7 @@ the Select` button. When clicked it closes all the previously selected tabs -->
          '%1$s' will be replaced at runtime with the status of the setting.
          '%2$s' will be replaced at runtime with the Learn More page link. -->
     <string name="tracking_dialog_message"><![CDATA[이 사이트의 향상된 추적 방지 기능은 %1$s입니다. (<a href="%2$s">더 알아보기</a>)]]></string>
-  
+
     <!-- This string is displayed in the on button of the quick Tracking Protection dialog when it's in enabled state. It's accessed from the Tracking Protection icon in the URL bar. -->
     <string name="tracking_dialog_button_on">켜짐</string>
 
@@ -1963,20 +1964,20 @@ the Select` button. When clicked it closes all the previously selected tabs -->
 
     <!-- This string is displayed in the switch button of the quick DRM dialog when it's in disabled state. It's accessed from the DRM icon in the URL bar. -->
     <string name="drm_dialog_button_off">꺼짐</string>
-  
+
     <!-- This string is displayed as the title of a dialog that is displayed the first time a user access DRM content if they haven't
          explicitly enable/Disable the DRM setting yet. -->
     <string name="drm_first_use_title_v1">이 사이트에는 DRM 콘텐츠가 포함되어 있습니다.</string>
-  
+
     <!-- This string is displayed as the body of a dialog that is displayed the first time a user access DRM content if they haven't
          explicitly enable/Disable the DRM setting yet.
          '%1$s' will be replaced at runtime with the Learn More page link. -->
     <string name="drm_first_use_body_v2"><![CDATA[DRM을 허용하면 사이트에서 사용자가 방문할 때마다 이 기기를 식별 할 수 있습니다. <a href="%1$s">더 알아보기</a>]]></string>
-  
+
     <!-- This string is displayed in the enable button that is displayed inside the dialog that is displayed the first time a user access
          access DRM content if they haven't explicitly enable/Disable the DRM setting yet. -->
     <string name="drm_first_use_allow">허용</string>
-  
+
     <!-- This string is displayed in the do not enable button that is displayed inside the dialog that is displayed the first time a user access
          access DRM content if they haven't explicitly enable/Disable the DRM setting yet. -->
     <string name="drm_first_use_do_not_allow">허용 안 함</string>

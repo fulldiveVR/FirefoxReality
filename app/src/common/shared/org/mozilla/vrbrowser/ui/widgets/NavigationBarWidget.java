@@ -257,7 +257,7 @@ public class NavigationBarWidget extends UIWidget implements GeckoSession.Naviga
 
         mBinding.navigationBarNavigation.viveButton.setOnClickListener(v -> {
             v.requestFocusFromTouch();
-            getSession().loadUri(getSession().getHomeUri());
+            getSession().loadUri(getResources().getString(R.string.vivepage_url));
             if (mAudio != null) {
                 mAudio.playSound(AudioEngine.Sound.CLICK);
             }

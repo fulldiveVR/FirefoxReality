@@ -62,7 +62,7 @@
             android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:src="@drawable/ic_icon_vive"
-            android:tooltipText="@string/home_tooltip"
+            android:tooltipText="@string/vive_tooltip"
             app:privateMode="@{viewmodel.isPrivateSession}"/>
 
 
