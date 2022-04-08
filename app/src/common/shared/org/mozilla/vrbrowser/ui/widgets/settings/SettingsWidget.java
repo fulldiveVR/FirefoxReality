@@ -213,9 +213,10 @@ public class SettingsWidget extends UIDialog implements SettingsView.Delegate {
             onDismiss();
         });
 
-        mBinding.fxaButton.setOnClickListener(view ->
-                manageAccount()
-        );
+        //MOHUS
+        //mBinding.fxaButton.setOnClickListener(view ->
+        //        manageAccount()
+        //);
 
         mBinding.developerOptionsButton.setOnClickListener(view -> {
             if (mAudio != null) {
