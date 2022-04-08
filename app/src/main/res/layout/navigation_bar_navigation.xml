@@ -56,6 +56,16 @@
             android:tooltipText="@string/home_tooltip"
             app:privateMode="@{viewmodel.isPrivateSession}"/>
 
+        <org.mozilla.vrbrowser.ui.views.UIButton
+            android:id="@+id/viveButton"
+            style="?attr/navigationBarButtonStyle"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_icon_vive"
+            android:tooltipText="@string/home_tooltip"
+            app:privateMode="@{viewmodel.isPrivateSession}"/>
+
+
         <org.mozilla.vrbrowser.ui.views.NavigationURLBar
             android:id="@+id/urlBar"
             android:layout_width="wrap_content"
