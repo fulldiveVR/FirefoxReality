@@ -302,7 +302,8 @@ public class HamburgerMenuWidget extends UIWidget implements
     }
 
     public void setSendTabEnabled(boolean value) {
-        mSendTabEnabled = value;
+        //MOHUS
+        //mSendTabEnabled = value;
         updateItems();
     }
 
