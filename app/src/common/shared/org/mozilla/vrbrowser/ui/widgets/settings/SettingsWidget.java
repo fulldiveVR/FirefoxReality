@@ -232,7 +232,8 @@ public class SettingsWidget extends UIDialog implements SettingsView.Delegate {
 
             showView(SettingsView.SettingViewType.CONTROLLER);
         });
-
+        //MOHUS
+        /*
         mBinding.whatsNewButton.setOnClickListener(v -> {
             SettingsStore.getInstance(getContext()).setRemotePropsVersionName(BuildConfig.VERSION_NAME);
             RemoteProperties props = mSettingsViewModel.getProps().getValue().get(BuildConfig.VERSION_NAME);
@@ -241,6 +242,7 @@ public class SettingsWidget extends UIDialog implements SettingsView.Delegate {
             }
             onDismiss();
         });
+        */
 
         mCurrentView = null;
     }
@@ -327,16 +329,19 @@ public class SettingsWidget extends UIDialog implements SettingsView.Delegate {
     private void updateCurrentAccountState() {
         switch(mAccounts.getAccountStatus()) {
             case NEEDS_RECONNECT:
-                mBinding.fxaButton.setText(R.string.settings_fxa_account_reconnect);
+                //MOHUS
+                //mBinding.fxaButton.setText(R.string.settings_fxa_account_reconnect);
                 break;
 
             case SIGNED_IN:
-                mBinding.fxaButton.setText(R.string.settings_fxa_account_manage);
+                //MOHUS
+                //mBinding.fxaButton.setText(R.string.settings_fxa_account_manage);
                 updateProfile(mAccounts.accountProfile());
                 break;
 
             case SIGNED_OUT:
-                mBinding.fxaButton.setText(R.string.settings_fxa_account_sign_in);
+                //MOHUS
+                //mBinding.fxaButton.setText(R.string.settings_fxa_account_sign_in);
                 updateProfile(mAccounts.accountProfile());
                 break;
         }
@@ -356,27 +361,32 @@ public class SettingsWidget extends UIDialog implements SettingsView.Delegate {
 
         @Override
         public void onLoggedOut() {
-            post(() -> mBinding.fxaButton.setText(R.string.settings_fxa_account_sign_in));
+            //MOHUS
+            //post(() -> mBinding.fxaButton.setText(R.string.settings_fxa_account_sign_in));
         }
 
         @Override
         public void onAuthenticationProblems() {
-            post(() -> mBinding.fxaButton.setText(R.string.settings_fxa_account_reconnect));
+            //MOHUS
+            //post(() -> mBinding.fxaButton.setText(R.string.settings_fxa_account_reconnect));
         }
 
         @Override
         public void onFlowError(@NotNull AuthFlowError authFlowError) {
-            post(() -> mBinding.fxaButton.setText(R.string.settings_fxa_account_reconnect));
+            //MOHUS
+            //post(() -> mBinding.fxaButton.setText(R.string.settings_fxa_account_reconnect));
         }
     };
 
     private void updateProfile(Profile profile) {
         BitmapDrawable profilePicture = mAccounts.getProfilePicture();
         if (profile != null && profilePicture != null) {
-            mBinding.fxaButton.setImageDrawable(profilePicture);
+            //MOHUS
+            //mBinding.fxaButton.setImageDrawable(profilePicture);
 
         } else {
-            mBinding.fxaButton.setImageDrawable(getContext().getDrawable(R.drawable.ic_icon_settings_account));
+            //MOHUS
+            //mBinding.fxaButton.setImageDrawable(getContext().getDrawable(R.drawable.ic_icon_settings_account));
         }
     }
 

@@ -255,6 +255,16 @@ public class NavigationBarWidget extends UIWidget implements GeckoSession.Naviga
             mNavigationListeners.forEach(NavigationListener::onHome);
         });
 
+        mBinding.navigationBarNavigation.viveButton.setOnClickListener(v -> {
+            v.requestFocusFromTouch();
+            getSession().loadUri(getSession().getHomeUri());
+            if (mAudio != null) {
+                mAudio.playSound(AudioEngine.Sound.CLICK);
+            }
+            mNavigationListeners.forEach(NavigationListener::onHome);
+        });
+
+
         mBinding.navigationBarNavigation.servoButton.setOnClickListener(v -> {
             v.requestFocusFromTouch();
             getSession().toggleServo();
@@ -450,7 +460,7 @@ public class NavigationBarWidget extends UIWidget implements GeckoSession.Naviga
         mWidgetManager.removeWorldClickListener(this);
         mWidgetManager.getServicesProvider().getConnectivityReceiver().removeListener(mConnectivityDelegate);
         mPrefs.unregisterOnSharedPreferenceChangeListener(this);
-        
+
         if (mAttachedWindow != null && mAttachedWindow.isFullScreen()) {
             // Workaround for https://issuetracker.google.com/issues/37123764
             // exitFullScreenMode() may animate some views that are then released
