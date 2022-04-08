@@ -15,9 +15,9 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.VRBrowserApplication;
-import org.mozilla.vrbrowser.databinding.OptionsEditLoginBinding;
+import com.vive.browser.wave.databinding.OptionsEditLoginBinding;
 import org.mozilla.vrbrowser.ui.widgets.WidgetManagerDelegate;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;
 import org.mozilla.vrbrowser.utils.SystemUtils;

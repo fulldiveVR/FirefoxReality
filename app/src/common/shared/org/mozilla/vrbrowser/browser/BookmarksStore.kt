@@ -17,7 +17,7 @@ import mozilla.components.concept.storage.BookmarkNode
 import mozilla.components.concept.storage.BookmarkNodeType
 import mozilla.components.service.fxa.sync.SyncStatusObserver
 import mozilla.components.support.base.log.logger.Logger
-import org.mozilla.vrbrowser.R
+import com.vive.browser.wave.R
 import org.mozilla.vrbrowser.VRBrowserApplication
 import org.mozilla.vrbrowser.utils.SystemUtils
 import java.util.concurrent.CompletableFuture

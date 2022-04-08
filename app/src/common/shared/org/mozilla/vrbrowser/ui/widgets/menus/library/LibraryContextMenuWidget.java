@@ -5,7 +5,7 @@ import android.content.res.Configuration;
 
 import androidx.annotation.NonNull;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.ui.callbacks.LibraryContextMenuCallback;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;
 import org.mozilla.vrbrowser.ui.widgets.menus.MenuWidget;

@@ -6,9 +6,9 @@ import android.view.LayoutInflater;
 
 import androidx.databinding.DataBindingUtil;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
-import org.mozilla.vrbrowser.databinding.WebxrInterstitialBinding;
+import com.vive.browser.wave.databinding.WebxrInterstitialBinding;
 import org.mozilla.vrbrowser.utils.DeviceType;
 import org.mozilla.vrbrowser.utils.ViewUtils;
 

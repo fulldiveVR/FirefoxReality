@@ -11,7 +11,7 @@ import android.widget.SeekBar;
 
 import androidx.annotation.Nullable;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 
 public class VolumeControl extends FrameLayout implements SeekBar.OnSeekBarChangeListener {
     private SeekBar mSeekBar;

@@ -19,8 +19,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 
-import org.mozilla.vrbrowser.R;
-import org.mozilla.vrbrowser.databinding.OptionsLanguageBinding;
+import com.vive.browser.wave.R;
+import com.vive.browser.wave.databinding.OptionsLanguageBinding;
 import org.mozilla.vrbrowser.ui.adapters.Language;
 import org.mozilla.vrbrowser.ui.widgets.WidgetManagerDelegate;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;

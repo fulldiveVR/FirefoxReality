@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import org.mozilla.geckoview.GeckoSession;
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.search.SearchEngineWrapper;
 import org.mozilla.vrbrowser.ui.views.UITextButton;
 import org.mozilla.vrbrowser.ui.widgets.UIWidget;

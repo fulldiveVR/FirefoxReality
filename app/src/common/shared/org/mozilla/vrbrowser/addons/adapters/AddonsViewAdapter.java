@@ -8,16 +8,16 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.addons.delegates.AddonsDelegate;
 import org.mozilla.vrbrowser.addons.views.AddonOptionsDetailsView;
 import org.mozilla.vrbrowser.addons.views.AddonOptionsPermissionsView;
 import org.mozilla.vrbrowser.addons.views.AddonOptionsView;
 import org.mozilla.vrbrowser.addons.views.AddonsListView;
-import org.mozilla.vrbrowser.databinding.AddonOptionsBinding;
-import org.mozilla.vrbrowser.databinding.AddonOptionsDetailsBinding;
-import org.mozilla.vrbrowser.databinding.AddonOptionsPermissionsBinding;
-import org.mozilla.vrbrowser.databinding.AddonsListBinding;
+import com.vive.browser.wave.databinding.AddonOptionsBinding;
+import com.vive.browser.wave.databinding.AddonOptionsDetailsBinding;
+import com.vive.browser.wave.databinding.AddonOptionsPermissionsBinding;
+import com.vive.browser.wave.databinding.AddonsListBinding;
 import org.mozilla.vrbrowser.ui.delegates.LibraryNavigationDelegate;
 
 import mozilla.components.feature.addons.Addon;

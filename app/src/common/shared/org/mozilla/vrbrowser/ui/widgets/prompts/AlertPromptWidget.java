@@ -5,7 +5,7 @@ import android.text.method.ScrollingMovementMethod;
 import android.util.AttributeSet;
 import android.widget.Button;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.audio.AudioEngine;
 
 public class AlertPromptWidget extends PromptWidget {

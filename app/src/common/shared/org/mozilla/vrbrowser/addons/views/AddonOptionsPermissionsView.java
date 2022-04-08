@@ -9,13 +9,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
 import org.mozilla.vrbrowser.VRBrowserApplication;
 import org.mozilla.vrbrowser.addons.adapters.AddonsOptionsPermissionsViewAdapter;
 import org.mozilla.vrbrowser.addons.delegates.AddonsDelegate;
 import org.mozilla.vrbrowser.browser.Addons;
-import org.mozilla.vrbrowser.databinding.AddonOptionsPermissionsBinding;
+import com.vive.browser.wave.databinding.AddonOptionsPermissionsBinding;
 import org.mozilla.vrbrowser.ui.widgets.WidgetManagerDelegate;
 import org.mozilla.vrbrowser.utils.SystemUtils;
 

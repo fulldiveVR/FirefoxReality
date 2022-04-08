@@ -13,7 +13,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.ui.keyboards.KeyboardInterface.Words;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;
 

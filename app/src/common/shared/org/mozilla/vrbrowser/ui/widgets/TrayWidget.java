@@ -31,14 +31,14 @@ import androidx.databinding.ObservableBoolean;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
 import org.mozilla.vrbrowser.VRBrowserApplication;
 import org.mozilla.vrbrowser.audio.AudioEngine;
 import org.mozilla.vrbrowser.browser.BookmarksStore;
 import org.mozilla.vrbrowser.browser.engine.Session;
 import org.mozilla.vrbrowser.browser.engine.SessionStore;
-import org.mozilla.vrbrowser.databinding.TrayBinding;
+import com.vive.browser.wave.databinding.TrayBinding;
 import org.mozilla.vrbrowser.downloads.Download;
 import org.mozilla.vrbrowser.downloads.DownloadsManager;
 import org.mozilla.vrbrowser.ui.viewmodel.TrayViewModel;

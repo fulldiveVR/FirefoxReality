@@ -16,12 +16,12 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.VRBrowserApplication;
 import org.mozilla.vrbrowser.browser.Addons;
-import org.mozilla.vrbrowser.databinding.HamburgerMenuAddonItemBinding;
-import org.mozilla.vrbrowser.databinding.HamburgerMenuAddonsSettingsItemBinding;
-import org.mozilla.vrbrowser.databinding.HamburgerMenuItemBinding;
+import com.vive.browser.wave.databinding.HamburgerMenuAddonItemBinding;
+import com.vive.browser.wave.databinding.HamburgerMenuAddonsSettingsItemBinding;
+import com.vive.browser.wave.databinding.HamburgerMenuItemBinding;
 import org.mozilla.vrbrowser.utils.SystemUtils;
 import org.mozilla.vrbrowser.utils.ViewUtils;
 

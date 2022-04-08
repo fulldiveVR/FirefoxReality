@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.view.View;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.ui.widgets.UIWidget;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;
 import org.mozilla.vrbrowser.utils.ViewUtils;

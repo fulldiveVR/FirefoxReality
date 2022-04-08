@@ -11,7 +11,7 @@ import android.text.SpannableStringBuilder;
 import android.util.Log;
 
 import org.mozilla.geckoview.GeckoSession;
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 
 import java.net.URI;
 

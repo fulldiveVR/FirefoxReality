@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import org.mozilla.geckoview.GeckoSession;
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.audio.AudioEngine;
 
 public class ConfirmPromptWidget extends PromptWidget {

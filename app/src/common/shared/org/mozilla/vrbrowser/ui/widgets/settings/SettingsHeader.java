@@ -12,8 +12,8 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.databinding.DataBindingUtil;
 
-import org.mozilla.vrbrowser.R;
-import org.mozilla.vrbrowser.databinding.OptionsHeaderBinding;
+import com.vive.browser.wave.R;
+import com.vive.browser.wave.databinding.OptionsHeaderBinding;
 
 public class SettingsHeader extends FrameLayout {
 

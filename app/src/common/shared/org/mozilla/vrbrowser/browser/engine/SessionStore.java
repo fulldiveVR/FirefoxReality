@@ -10,8 +10,8 @@ import androidx.annotation.Nullable;
 
 import org.mozilla.geckoview.GeckoRuntime;
 import org.mozilla.geckoview.GeckoSession;
-import org.mozilla.vrbrowser.BuildConfig;
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.BuildConfig;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.VRBrowserApplication;
 import org.mozilla.vrbrowser.browser.BookmarksStore;
 import org.mozilla.vrbrowser.browser.HistoryStore;

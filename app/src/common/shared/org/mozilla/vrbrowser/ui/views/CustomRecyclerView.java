@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 
 public class CustomRecyclerView extends RecyclerView {
 

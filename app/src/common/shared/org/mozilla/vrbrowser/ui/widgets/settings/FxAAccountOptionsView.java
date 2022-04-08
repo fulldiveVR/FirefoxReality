@@ -15,11 +15,11 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 
 import org.jetbrains.annotations.NotNull;
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.VRBrowserApplication;
 import org.mozilla.vrbrowser.browser.Accounts;
 import org.mozilla.vrbrowser.browser.SettingsStore;
-import org.mozilla.vrbrowser.databinding.OptionsFxaAccountBinding;
+import com.vive.browser.wave.databinding.OptionsFxaAccountBinding;
 import org.mozilla.vrbrowser.ui.views.settings.SwitchSetting;
 import org.mozilla.vrbrowser.ui.widgets.UIWidget;
 import org.mozilla.vrbrowser.ui.widgets.WidgetManagerDelegate;

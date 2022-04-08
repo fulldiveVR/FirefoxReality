@@ -8,7 +8,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

@@ -12,11 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
 import org.mozilla.vrbrowser.VRBrowserApplication;
 import org.mozilla.vrbrowser.addons.views.AddonsView;
-import org.mozilla.vrbrowser.databinding.LibraryBinding;
+import com.vive.browser.wave.databinding.LibraryBinding;
 import org.mozilla.vrbrowser.ui.delegates.LibraryNavigationDelegate;
 import org.mozilla.vrbrowser.ui.widgets.WidgetManagerDelegate;
 import org.mozilla.vrbrowser.ui.widgets.Windows;

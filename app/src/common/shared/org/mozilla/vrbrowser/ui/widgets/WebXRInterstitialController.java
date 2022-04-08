@@ -6,9 +6,9 @@ import android.view.LayoutInflater;
 import androidx.annotation.IntDef;
 import androidx.databinding.DataBindingUtil;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
-import org.mozilla.vrbrowser.databinding.WebxrInterstitialControllerBinding;
+import com.vive.browser.wave.databinding.WebxrInterstitialControllerBinding;
 import org.mozilla.vrbrowser.utils.DeviceType;
 
 public class WebXRInterstitialController extends UIWidget {

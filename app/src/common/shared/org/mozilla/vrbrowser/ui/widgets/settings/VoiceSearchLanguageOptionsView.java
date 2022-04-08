@@ -11,9 +11,9 @@ import android.view.LayoutInflater;
 
 import androidx.databinding.DataBindingUtil;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.browser.engine.SessionStore;
-import org.mozilla.vrbrowser.databinding.OptionsLanguageVoiceBinding;
+import com.vive.browser.wave.databinding.OptionsLanguageVoiceBinding;
 import org.mozilla.vrbrowser.ui.views.settings.RadioGroupSetting;
 import org.mozilla.vrbrowser.ui.widgets.WidgetManagerDelegate;
 import org.mozilla.vrbrowser.ui.widgets.WidgetPlacement;

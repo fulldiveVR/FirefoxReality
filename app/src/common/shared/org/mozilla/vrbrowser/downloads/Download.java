@@ -7,7 +7,7 @@ import android.database.Cursor;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.ui.adapters.Language;
 import org.mozilla.vrbrowser.utils.LocaleUtils;
 

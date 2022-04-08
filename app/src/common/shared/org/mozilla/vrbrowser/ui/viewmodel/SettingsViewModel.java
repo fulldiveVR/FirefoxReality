@@ -13,7 +13,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import org.mozilla.geckoview.ContentBlocking;
-import org.mozilla.vrbrowser.BuildConfig;
+import com.vive.browser.wave.BuildConfig;
 import org.mozilla.vrbrowser.browser.SettingsStore;
 import org.mozilla.vrbrowser.utils.RemoteProperties;
 import org.mozilla.vrbrowser.utils.SystemUtils;

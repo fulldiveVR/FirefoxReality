@@ -45,7 +45,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.input.CustomKeyboard;
 
 import java.lang.ref.WeakReference;

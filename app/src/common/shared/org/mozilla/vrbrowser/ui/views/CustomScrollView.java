@@ -18,7 +18,7 @@ import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.core.view.ViewCompat;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 
 public class CustomScrollView extends ScrollView {
 

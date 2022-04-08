@@ -12,8 +12,8 @@ import androidx.annotation.NonNull;
 
 import org.mozilla.geckoview.CrashReporter;
 import org.mozilla.geckoview.GeckoResult;
-import org.mozilla.vrbrowser.BuildConfig;
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.BuildConfig;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
 import org.mozilla.vrbrowser.VRBrowserApplication;
 

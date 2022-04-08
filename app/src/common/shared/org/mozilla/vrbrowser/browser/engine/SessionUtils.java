@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import org.mozilla.gecko.GeckoProfile;
-import org.mozilla.vrbrowser.BuildConfig;
+import com.vive.browser.wave.BuildConfig;
 import org.mozilla.vrbrowser.browser.SettingsStore;
 import org.mozilla.vrbrowser.utils.SystemUtils;
 

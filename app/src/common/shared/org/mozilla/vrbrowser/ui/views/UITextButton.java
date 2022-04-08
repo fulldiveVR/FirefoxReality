@@ -11,7 +11,7 @@ import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 
 import androidx.annotation.IdRes;
 import androidx.appcompat.widget.AppCompatButton;

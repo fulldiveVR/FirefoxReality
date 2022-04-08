@@ -28,15 +28,15 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
 import org.jetbrains.annotations.NotNull;
-import org.mozilla.vrbrowser.BuildConfig;
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.BuildConfig;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
 import org.mozilla.vrbrowser.VRBrowserApplication;
 import org.mozilla.vrbrowser.audio.AudioEngine;
 import org.mozilla.vrbrowser.browser.Accounts;
 import org.mozilla.vrbrowser.browser.SettingsStore;
 import org.mozilla.vrbrowser.browser.engine.Session;
-import org.mozilla.vrbrowser.databinding.SettingsBinding;
+import com.vive.browser.wave.databinding.SettingsBinding;
 import org.mozilla.vrbrowser.db.SitePermission;
 import org.mozilla.vrbrowser.telemetry.GleanMetricsService;
 import org.mozilla.vrbrowser.ui.viewmodel.SettingsViewModel;

@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 
 public class DoubleEditSetting extends SingleEditSetting {
 

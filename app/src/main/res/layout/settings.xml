@@ -6,7 +6,7 @@
         <variable
             name="settingsmodel"
             type="org.mozilla.vrbrowser.ui.viewmodel.SettingsViewModel" />
-        <import type="org.mozilla.vrbrowser.BuildConfig"/>
+        <import type="com.vive.browser.wave.BuildConfig"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

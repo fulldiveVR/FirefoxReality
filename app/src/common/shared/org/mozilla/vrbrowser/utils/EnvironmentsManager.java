@@ -12,7 +12,7 @@ import com.mozilla.speechlibrary.utils.zip.UnzipCallback;
 import com.mozilla.speechlibrary.utils.zip.UnzipTask;
 
 import org.mozilla.geckoview.GeckoSession;
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.browser.SettingsStore;
 import org.mozilla.vrbrowser.downloads.Download;
 import org.mozilla.vrbrowser.downloads.DownloadJob;

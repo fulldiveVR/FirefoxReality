@@ -15,9 +15,9 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 
 import org.mozilla.geckoview.GeckoSession;
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.browser.engine.Session;
-import org.mozilla.vrbrowser.databinding.OptionsExceptionsBinding;
+import com.vive.browser.wave.databinding.OptionsExceptionsBinding;
 import org.mozilla.vrbrowser.db.SitePermission;
 import org.mozilla.vrbrowser.ui.adapters.SitePermissionAdapter;
 import org.mozilla.vrbrowser.ui.callbacks.PermissionSiteItemCallback;

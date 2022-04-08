@@ -38,7 +38,7 @@ import mozilla.components.feature.addons.ui.translatedName
 import mozilla.components.feature.addons.ui.translatedSummary
 import mozilla.components.support.base.log.logger.Logger
 import mozilla.components.support.ktx.android.content.res.resolveAttribute
-import org.mozilla.vrbrowser.R
+import com.vive.browser.wave.R
 import java.io.IOException
 import java.text.NumberFormat
 import java.util.*

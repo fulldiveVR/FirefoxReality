@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.input.CustomKeyboard;
 import org.mozilla.vrbrowser.utils.StringUtils;
 import org.mozilla.vrbrowser.utils.SystemUtils;

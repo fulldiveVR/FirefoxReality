@@ -18,7 +18,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 
 import org.mozilla.geckoview.ContentBlocking;
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.browser.SettingsStore;
 import org.mozilla.vrbrowser.ui.widgets.Windows;
 import org.mozilla.vrbrowser.utils.ServoUtils;

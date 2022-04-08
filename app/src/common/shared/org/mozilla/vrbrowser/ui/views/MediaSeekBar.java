@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 
 import androidx.annotation.Nullable;
 

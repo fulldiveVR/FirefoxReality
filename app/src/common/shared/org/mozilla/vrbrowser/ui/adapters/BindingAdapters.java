@@ -18,7 +18,7 @@ import androidx.databinding.BindingAdapter;
 import androidx.databinding.ObservableList;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.downloads.Download;
 import org.mozilla.vrbrowser.ui.views.HoneycombButton;
 import org.mozilla.vrbrowser.ui.views.UIButton;

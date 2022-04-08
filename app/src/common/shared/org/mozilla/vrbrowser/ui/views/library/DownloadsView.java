@@ -19,11 +19,11 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.VRBrowserActivity;
 import org.mozilla.vrbrowser.browser.SettingsStore;
 import org.mozilla.vrbrowser.browser.engine.SessionStore;
-import org.mozilla.vrbrowser.databinding.DownloadsBinding;
+import com.vive.browser.wave.databinding.DownloadsBinding;
 import org.mozilla.vrbrowser.downloads.Download;
 import org.mozilla.vrbrowser.downloads.DownloadsManager;
 import org.mozilla.vrbrowser.telemetry.GleanMetricsService;

@@ -5,7 +5,7 @@ import android.util.Base64;
 
 import androidx.annotation.Nullable;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 
 import org.mozilla.geckoview.WebRequestError;
 

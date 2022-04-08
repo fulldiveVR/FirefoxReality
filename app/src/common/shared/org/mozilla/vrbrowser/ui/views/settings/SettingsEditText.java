@@ -12,7 +12,7 @@ import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 
 @SuppressLint("AppCompatCustomView")
 public class SettingsEditText extends EditText {

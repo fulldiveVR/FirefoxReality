@@ -4,7 +4,7 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.ui.callbacks.DownloadsContextMenuCallback;
 
 public class DownloadsContextMenuWidget extends LibraryContextMenuWidget {

@@ -13,7 +13,7 @@ import androidx.lifecycle.Observer;
 
 import org.mozilla.geckoview.GeckoSession;
 import org.mozilla.vrbrowser.PlatformActivity;
-import org.mozilla.vrbrowser.R;
+import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.browser.engine.Session;
 import org.mozilla.vrbrowser.browser.engine.SessionState;
 import org.mozilla.vrbrowser.browser.engine.SessionStore;
