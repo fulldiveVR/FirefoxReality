@@ -1451,7 +1451,7 @@
     <!-- This string is for the tooltip that appears upon hovering the 'Home' button in the browser's navigation bar.
          'Home' refers to the browser's start page (e.g., the Firefox Reality Home Page). -->
     <string name="home_tooltip">Домой</string>
-    <string name="vive_tooltip">Vive Connect</string>
+    <string name="vive_tooltip">VIVE Connect</string>
 
     <!-- This string is for the tooltip that appears upon hovering the 'Voice Search' (microphone) button in the
          browser's navigation bar. 'Voice Search' refers to the browser's system for searching the Web using
