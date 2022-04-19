@@ -1012,6 +1012,7 @@ vrb::LoadTask DeviceDelegateWaveVR::GetControllerModelTask(int32_t aModelIndex) 
       // Load controller model from SDK
       VRB_LOG("[WaveVR] (%p) Loading internal controller model: %d", this, aModelIndex);
       WVR_DeviceType mCtrlerType = hand == ElbowModel::HandEnum::Left ? WVR_DeviceType_Controller_Left : WVR_DeviceType_Controller_Right;
+
       {//Critical Section: Clear flag and cached parsed data.
         std::lock_guard<std::mutex> lockGuard(m.mCachedDataMutex[aModelIndex]);
         if (m.modelCachedData[aModelIndex] != nullptr) {
@@ -1028,7 +1029,19 @@ vrb::LoadTask DeviceDelegateWaveVR::GetControllerModelTask(int32_t aModelIndex) 
           m.isModelDataReady[aModelIndex] = true;
         }//Critical Section: Set data ready flag.(End)
       } else {
-        VRB_LOG("[WaveVR] (%d[%p]): Load fail. Reason(%d)", mCtrlerType, this, result);
+        VRB_LOG("[WaveVR] (%d[%p]): Load fail. Try to force right model for Wave. Reason(%d)", mCtrlerType, this, result);
+        //MOHUS for Wave fix
+        mCtrlerType = WVR_DeviceType_Controller_Right;//WVR_DeviceType_HMD;
+        result = WVR_GetCurrentControllerModel(mCtrlerType, &m.modelCachedData[aModelIndex]);
+        if (result == WVR_Success) {
+          {//Critical Section: Set data ready flag.
+            std::lock_guard<std::mutex> lockGuard(m.mCachedDataMutex[aModelIndex]);
+            VRB_LOG("[WaveVR] (%d[%p]) Controller model from the SDK successfully loaded by second step: %d", mCtrlerType, this, hand)
+            m.isModelDataReady[aModelIndex] = true;
+          }//Critical Section: Set data ready flag.(End)
+        } else {
+          VRB_LOG("[WaveVR] (%d[%p]): Load fail. Reason(%d)", mCtrlerType, this, result);
+        }
       }
 
       if (m.isModelDataReady[aModelIndex]) {
