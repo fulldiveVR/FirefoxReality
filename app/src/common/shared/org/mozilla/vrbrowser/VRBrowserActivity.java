@@ -382,7 +382,8 @@ public class VRBrowserActivity extends PlatformActivity implements WidgetManager
             mWhatsNewWidget = new WhatsNewWidget(this);
             mWhatsNewWidget.setLoginOrigin(Accounts.LoginOrigin.NONE);
             mWhatsNewWidget.getPlacement().parentHandle = mWindows.getFocusedWindow().getHandle();
-            mWhatsNewWidget.show(UIWidget.REQUEST_FOCUS);
+            //MOHUS
+            //mWhatsNewWidget.show(UIWidget.REQUEST_FOCUS);
         }
 
         mWindows.restoreSessions();
