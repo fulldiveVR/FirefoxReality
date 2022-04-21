@@ -542,6 +542,7 @@ if (findProject(':wavesdk')) {
 
 dependencies {
     wavevrApi 'com.htc.vr:wvr_client:+'
+    wavevrStoreApi 'com.htc.vr:wvr_client:+'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     // "nightly" or "beta" or "release"
