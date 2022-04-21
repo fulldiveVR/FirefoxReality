@@ -52,3 +52,31 @@ and place into ./app/src/main/cpp/vrb/third_party/gliml
 ## result APK
 
 result APK located in  ./app/build/outputs/apk/wavevrArm64/debug/FirefoxReality-wavevr-arm64-debug.apk
+
+
+
+# How to build for Oculus
+
+## download and unpack Oculus SDKs into folders:
+/third_party/OpenXR-SDK
+/third_party/ovr_mobile
+/third_party/ovr_openxr_mobile_sdk
+/third_party/OVRPlatformSDK
+
+Attention!: if you use OVRPlatformSDK with version for example 38, then application will work only on devices with updated firmware to 38 version ! I think we do not use latest version of SDK.
+
+## openxr build
+Add
+openxr=true
+into user.properties file (in root folder) for openxr build
+
+# already prepared package of third_party folder
+
+You can just unzip third_party.zip from root - it contains all unpacked and configured SDKs for Wave and Oculus build
+
+
+# add .dev to package for test on device already has preinstalled browser with the same package id
+
+add
+simultaneousDevProduction=true
+into user.properties file (in root folder)
