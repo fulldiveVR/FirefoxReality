@@ -611,6 +611,9 @@
          representations of colonies on other non-Earth planets. -->
     <string name="developer_options_env_offworld">外星世界</string>
 
+    <string name="developer_options_env_vive">VIVE Browser</string>
+    <string name="developer_options_env_space">Space</string>
+
     <!-- This string labels the radio button that selects the 'Underwater' environment,
          a brightly lit submarine themed environment. -->
     <string name="developer_options_env_underwater">水下</string>

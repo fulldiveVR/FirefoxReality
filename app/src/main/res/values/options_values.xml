@@ -3,17 +3,35 @@
     <!-- Environments Options -->
     <string-array name="developer_options_environments" translatable="false">
         <item>@string/developer_options_env_void</item>
+        <item>@string/developer_options_env_vive</item>
+        <item>@string/developer_options_env_cave</item>
+        <item>@string/developer_options_env_meadow</item>
         <item>@string/developer_options_env_offworld</item>
+        <item>@string/developer_options_env_space</item>
+        <item>@string/developer_options_env_underwater</item>
+        <item>@string/developer_options_env_winter</item>
     </string-array>
 
     <string-array name="developer_options_environments_values" translatable="false">
         <item>void</item>
+        <item>vive</item>
+        <item>cave</item>
+        <item>meadow</item>
         <item>offworld</item>
+        <item>space</item>
+        <item>underwater</item>
+        <item>winter</item>
     </string-array>
 
     <array name="developer_options_environments_images" translatable="false">
         <item>@color/black</item>
+        <item>@drawable/environment_vive</item>
+        <item>@drawable/environment_cave</item>
+        <item>@drawable/environment_meadow</item>
         <item>@drawable/environment_offworld</item>
+        <item>@drawable/environment_space</item>
+        <item>@drawable/environment_underwater</item>
+        <item>@drawable/environment_winter</item>
     </array>
 
     <!-- Pointer Options -->

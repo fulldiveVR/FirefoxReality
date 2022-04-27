@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+
+rm -R ../../app/src/main/assets/cubemap/vive
+mkdir ../../app/src/main/assets/cubemap/vive
+
+rm -R ../../app/src/main/assets/cubemap/cave
+mkdir ../../app/src/main/assets/cubemap/cave
+
+rm -R ../../app/src/main/assets/cubemap/meadow
+mkdir ../../app/src/main/assets/cubemap/meadow
+
+rm -R ../../app/src/main/assets/cubemap/offworld
+mkdir ../../app/src/main/assets/cubemap/offworld
+
+rm -R ../../app/src/main/assets/cubemap/space
+mkdir ../../app/src/main/assets/cubemap/space
+
+rm -R ../../app/src/main/assets/cubemap/underwater
+mkdir ../../app/src/main/assets/cubemap/underwater
+
+rm -R ../../app/src/main/assets/cubemap/winter
+mkdir ../../app/src/main/assets/cubemap/winter
+
+
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/vive/posx.png -output ../../app/src/main/assets/cubemap/vive/posx.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/vive/negx.png -output ../../app/src/main/assets/cubemap/vive/negx.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/vive/posy.png -output ../../app/src/main/assets/cubemap/vive/posy.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/vive/negy.png -output ../../app/src/main/assets/cubemap/vive/negy.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/vive/posz.png -output ../../app/src/main/assets/cubemap/vive/posz.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/vive/negz.png -output ../../app/src/main/assets/cubemap/vive/negz.ktx -format RGBA8 -effort 100 -v
+
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/cave/posx.png -output ../../app/src/main/assets/cubemap/cave/posx.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/cave/negx.png -output ../../app/src/main/assets/cubemap/cave/negx.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/cave/posy.png -output ../../app/src/main/assets/cubemap/cave/posy.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/cave/negy.png -output ../../app/src/main/assets/cubemap/cave/negy.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/cave/posz.png -output ../../app/src/main/assets/cubemap/cave/posz.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/cave/negz.png -output ../../app/src/main/assets/cubemap/cave/negz.ktx -format RGBA8 -effort 100 -v
+
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/meadow/posx.png -output ../../app/src/main/assets/cubemap/meadow/posx.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/meadow/negx.png -output ../../app/src/main/assets/cubemap/meadow/negx.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/meadow/posy.png -output ../../app/src/main/assets/cubemap/meadow/posy.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/meadow/negy.png -output ../../app/src/main/assets/cubemap/meadow/negy.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/meadow/posz.png -output ../../app/src/main/assets/cubemap/meadow/posz.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/meadow/negz.png -output ../../app/src/main/assets/cubemap/meadow/negz.ktx -format RGBA8 -effort 100 -v
+
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/offworld/posx.png -output ../../app/src/main/assets/cubemap/offworld/posx.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/offworld/negx.png -output ../../app/src/main/assets/cubemap/offworld/negx.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/offworld/posy.png -output ../../app/src/main/assets/cubemap/offworld/posy.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/offworld/negy.png -output ../../app/src/main/assets/cubemap/offworld/negy.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/offworld/posz.png -output ../../app/src/main/assets/cubemap/offworld/posz.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/offworld/negz.png -output ../../app/src/main/assets/cubemap/offworld/negz.ktx -format RGBA8 -effort 100 -v
+
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/space/posx.png -output ../../app/src/main/assets/cubemap/space/posx.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/space/negx.png -output ../../app/src/main/assets/cubemap/space/negx.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/space/posy.png -output ../../app/src/main/assets/cubemap/space/posy.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/space/negy.png -output ../../app/src/main/assets/cubemap/space/negy.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/space/posz.png -output ../../app/src/main/assets/cubemap/space/posz.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/space/negz.png -output ../../app/src/main/assets/cubemap/space/negz.ktx -format RGBA8 -effort 100 -v
+
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/underwater/posx.png -output ../../app/src/main/assets/cubemap/underwater/posx.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/underwater/negx.png -output ../../app/src/main/assets/cubemap/underwater/negx.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/underwater/posy.png -output ../../app/src/main/assets/cubemap/underwater/posy.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/underwater/negy.png -output ../../app/src/main/assets/cubemap/underwater/negy.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/underwater/posz.png -output ../../app/src/main/assets/cubemap/underwater/posz.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/underwater/negz.png -output ../../app/src/main/assets/cubemap/underwater/negz.ktx -format RGBA8 -effort 100 -v
+
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/winter/posx.png -output ../../app/src/main/assets/cubemap/winter/posx.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/winter/negx.png -output ../../app/src/main/assets/cubemap/winter/negx.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/winter/posy.png -output ../../app/src/main/assets/cubemap/winter/posy.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/winter/negy.png -output ../../app/src/main/assets/cubemap/winter/negy.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/winter/posz.png -output ../../app/src/main/assets/cubemap/winter/posz.ktx -format RGBA8 -effort 100 -v
+./EtcTool ../../app/src/uncompressed_assets/main/assets/cubemap/winter/negz.png -output ../../app/src/main/assets/cubemap/winter/negz.ktx -format RGBA8 -effort 100 -v

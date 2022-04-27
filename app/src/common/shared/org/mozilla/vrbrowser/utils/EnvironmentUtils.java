@@ -175,6 +175,9 @@ public class EnvironmentUtils {
      * @return The Remote environments list or null if they couldn't be found.
      */
     public static Environment[] getExternalEnvironments(@NonNull Context context, @NonNull String versionName) {
+        //MOHUS
+        return null;
+        /*
         Map<String, RemoteProperties> properties = SettingsStore.getInstance(context).getRemoteProperties();
         if (properties != null) {
             // If there are environments for the current version we return those,
@@ -199,6 +202,7 @@ public class EnvironmentUtils {
         }
 
         return null;
+        */
     }
 
     /**
