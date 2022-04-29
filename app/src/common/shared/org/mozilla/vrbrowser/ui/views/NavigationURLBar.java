@@ -52,6 +52,14 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.concurrent.Executor;
 
+import java.net.URL;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
+
 import kotlin.Unit;
 import mozilla.components.browser.domains.autocomplete.DomainAutocompleteResult;
 import mozilla.components.browser.domains.autocomplete.ShippedDomainsProvider;
@@ -104,6 +112,16 @@ public class NavigationURLBar extends FrameLayout {
     public NavigationURLBar(Context context, AttributeSet attrs) {
         super(context, attrs);
         initialize(context);
+    }
+
+    private String sanitizeURL(String raw_url) {
+        try {
+            URL url = new URL(URLDecoder.decode(raw_url, StandardCharsets.UTF_8.toString()));
+            URI uri = new URI(url.getProtocol(), url.getUserInfo(), url.getHost(), url.getPort(), url.getPath(), url.getQuery(), url.getRef());
+            return uri.toString();
+        } catch (URISyntaxException | UnsupportedEncodingException | MalformedURLException ignored) {
+            return "";
+        }
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -517,7 +535,8 @@ public class NavigationURLBar extends FrameLayout {
                     if (action.equals(GeckoSession.SelectionActionDelegate.ACTION_CUT) && selectionValid) {
                         String selectedText = mBinding.urlEditText.getText().toString().substring(startSelection, endSelection);
                         clipboard.setPrimaryClip(ClipData.newPlainText("text", selectedText));
-                        mBinding.urlEditText.setText(StringUtils.removeRange(mBinding.urlEditText.getText().toString(), startSelection, endSelection));
+                        String newText = sanitizeURL(StringUtils.removeRange(mBinding.urlEditText.getText().toString(), startSelection, endSelection));
+                        mBinding.urlEditText.setText(newText);
                         mBinding.urlEditText.setSelection(startSelection);
 
                     } else if (action.equals(GeckoSession.SelectionActionDelegate.ACTION_COPY) && selectionValid) {
@@ -527,7 +546,8 @@ public class NavigationURLBar extends FrameLayout {
                     } else if (action.equals(GeckoSession.SelectionActionDelegate.ACTION_PASTE) && clipboard.hasPrimaryClip()) {
                         ClipData.Item item = clipboard.getPrimaryClip().getItemAt(0);
                         if (selectionValid) {
-                            mBinding.urlEditText.setText(StringUtils.removeRange(mBinding.urlEditText.getText().toString(), startSelection, endSelection));
+                            String newText = sanitizeURL(StringUtils.removeRange(mBinding.urlEditText.getText().toString(), startSelection, endSelection));
+                            mBinding.urlEditText.setText(newText);
                             mBinding.urlEditText.setSelection(startSelection);
                         }
                         if (item != null && item.getText() != null) {
