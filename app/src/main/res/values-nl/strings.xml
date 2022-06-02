@@ -614,7 +614,7 @@
          representations of colonies on other non-Earth planets. -->
     <string name="developer_options_env_offworld">Buitenaards</string>
 
-    <string name="developer_options_env_vive">VIVE Browser</string>
+    <string name="developer_options_env_vive">VIVERSE Browser</string>
     <string name="developer_options_env_space">Space</string>
 
     <!-- This string labels the radio button that selects the 'Underwater' environment,
