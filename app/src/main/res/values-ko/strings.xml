@@ -882,7 +882,7 @@
 
     <!-- This string explains why Mozilla would like the user to allow the crash data to be uploaded.
          '%1$s' will be replaced at runtime with the app's domain name. -->
-    <string name="crash_dialog_message"><![CDATA[충돌 데이터를 보내서 Mozilla가 %1$s을(를) 개선하도록 도와주세요. <a href="more">더 알아보기</a>]]></string>
+    <string name="crash_dialog_message"><![CDATA[충돌 데이터를 보내서 VIVEPORT가 %1$s을(를) 개선하도록 도와주세요. <a href="more">더 알아보기</a>]]></string>
 
     <!-- This string labels a checkbox in the crash dialog box. When checked, the user will no longer
          be prompted for permission to upload crash data after an application crash. -->
