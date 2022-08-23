@@ -71,8 +71,8 @@ android {
         applicationId "com.vive.browser.wave"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
-        versionCode 9
-        versionName "1.4"
+        versionCode 10
+        versionName "1.5"
         buildConfigField "String", "GIT_HASH", "\"${getGitHash()}\""
         buildConfigField "Boolean", "DISABLE_CRASH_RESTART", getCrashRestartDisabled()
         buildConfigField "Boolean", "TASKCLUSTER_BUILD", getTaskclusterBuild()
