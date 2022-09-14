@@ -71,8 +71,8 @@ android {
         applicationId "com.vive.browser.wave"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
-        versionCode 11
-        versionName "1.6"
+        versionCode 14
+        versionName "1.8"
         buildConfigField "String", "GIT_HASH", "\"${getGitHash()}\""
         buildConfigField "Boolean", "DISABLE_CRASH_RESTART", getCrashRestartDisabled()
         buildConfigField "Boolean", "TASKCLUSTER_BUILD", getTaskclusterBuild()
@@ -189,7 +189,7 @@ android {
                     arguments "-DVR_SDK_LIB=wavevr-lib", "-DWAVEVR=ON", "-DWAVE_SDK_VERSION=${versions.wavevr}"
                 }
             }
-            applicationIdSuffix ".internal"
+            //applicationIdSuffix ".internal"
         }
 
         wavevrStore {
@@ -203,7 +203,7 @@ android {
                     arguments "-DVR_SDK_LIB=wavevr-lib", "-DWAVEVR=ON", "-DWAVE_SDK_VERSION=${versions.wavevr}"
                 }
             }
-            applicationIdSuffix ".storeinternal"
+            //applicationIdSuffix ".storeinternal"
         }
 
         picovr {
