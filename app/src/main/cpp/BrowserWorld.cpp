@@ -529,11 +529,17 @@ BrowserWorld::State::UpdateControllers(bool& aRelayoutWidgets) {
         controller.pointerY = theY;
         VRBrowser::HandleMotionEvent(handle, controller.index, jboolean(controller.focused), jboolean(pressed), controller.pointerX, controller.pointerY);
       }
+
+      //VRB_ERROR("[FULLDIVE] BrowserWorld TEST");
+
       if ((controller.scrollDeltaX != 0.0f) || controller.scrollDeltaY != 0.0f) {
         if (controller.scrollStart < 0.0) {
           controller.scrollStart = context->GetTimestamp();
         }
         const double ctime = context->GetTimestamp();
+
+        //VRB_ERROR("[FULLDIVE] VRBrowser::HandleScrollEvent [A](%d, %.2f, %.2f)", (int)controller.index, ScaleScrollDelta(controller.scrollDeltaX, controller.scrollStart, ctime),
+        ScaleScrollDelta(controller.scrollDeltaY, controller.scrollStart, ctime));
         VRBrowser::HandleScrollEvent(controller.widget, controller.index,
                             ScaleScrollDelta(controller.scrollDeltaX, controller.scrollStart, ctime),
                             ScaleScrollDelta(controller.scrollDeltaY, controller.scrollStart, ctime));
@@ -541,12 +547,16 @@ BrowserWorld::State::UpdateControllers(bool& aRelayoutWidgets) {
         controller.scrollDeltaY = 0.0f;
       } else {
         controller.scrollStart = -1.0;
+        controller.scrollDeltaX = 0.0f;
+        controller.scrollDeltaY = 0.0f;
       }
       if (!pressed) {
         if (controller.touched) {
           if (!controller.wasTouched) {
             controller.wasTouched = controller.touched;
           } else {
+            //VRB_ERROR("[FULLDIVE] VRBrowser::HandleScrollEvent [B](%d, %.2f, %.2f)", (int)controller.index, (controller.touchX - controller.lastTouchX) * kScrollFactor,
+              (controller.touchY - controller.lastTouchY) * kScrollFactor);
             VRBrowser::HandleScrollEvent(controller.widget,
                                 controller.index,
                                 (controller.touchX - controller.lastTouchX) * kScrollFactor,
@@ -609,6 +619,8 @@ BrowserWorld::State::ClearWebXRControllerData() {
         controller.selectActionStopFrameId = 0;
         controller.squeezeActionStartFrameId = 0;
         controller.squeezeActionStopFrameId = 0;
+        controller.scrollDeltaX = 0.0;
+        controller.scrollDeltaY = 0.0;
         for (int i = 0; i < controller.numAxes; ++i) {
             controller.immersiveAxes[i] = 0;
         }

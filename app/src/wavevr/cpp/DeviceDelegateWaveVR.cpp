@@ -434,23 +434,31 @@ struct DeviceDelegateWaveVR::State {
       }
       delegate->SetButtonState(controller.index, ControllerDelegate::BUTTON_APP, -1, menuPressed, menuPressed);
 
-      float axisX, axisY = 0.0f;
+      float axisX = 0.0f;
+      float axisY = 0.0f;
       if (touchpadTouched) {
+        //VRB_ERROR("[FULLDIVE] touchpadTouched");
         WVR_Axis_t axis = WVR_GetInputAnalogAxis(controller.type, WVR_InputId_Alias1_Touchpad);
         axisX = axis.x;
         axisY = -axis.y;
+        //VRB_ERROR("[FULLDIVE] Controller [ %d ] AxisX[ %.2f ] AxisY[ %.2f ]", (int)controller.index, axisX, -axisY);
         // In case we have thumbstick we don't send the touchpad touched event
         if (!(ctl_touch & WVR_InputId_Alias1_Thumbstick)) {
           // We are matching touch pad range from {-1, 1} to the Oculus {0, 1}.
+          //VRB_ERROR("[FULLDIVE] delegate->SetTouchPosition(%d, %.2f, %.2f)", (int)controller.index, (axis.x + 1) * 0.5, (-axis.y + 1) * 0.5);
           delegate->SetTouchPosition(controller.index, (axis.x + 1) * 0.5, (-axis.y + 1) * 0.5);
           controller.touched = true;
         }
+
+        //VRB_ERROR("[FULLDIVE] delegate->SetScrolledDelta(%d, %.2f, %.2f)", controller.index, -axis.x, axis.y);
         delegate->SetScrolledDelta(
                 controller.index,
                 -axis.x, axis.y);
       } else if (controller.touched) {
+        //VRB_ERROR("[FULLDIVE] controller.touched");
         if (!(ctl_touch & WVR_InputId_Alias1_Thumbstick)) {
           controller.touched = false;
+          //VRB_ERROR("[FULLDIVE] delegate->EndTouch(%d)", (int)controller.index);
           delegate->EndTouch(controller.index);
         }
       }
@@ -461,6 +469,7 @@ struct DeviceDelegateWaveVR::State {
         immersiveAxes[device::kImmersiveAxisTouchpadX] = immersiveAxes[device::kImmersiveAxisTouchpadY] = 0.0f;
         immersiveAxes[device::kImmersiveAxisThumbstickX] = axisX;
         immersiveAxes[device::kImmersiveAxisThumbstickY] = axisY;
+        //VRB_ERROR("[FULLDIVE] delegate->SetAxes(%d, %.2f, %.2f, %.2f, %.2f)", controller.index, immersiveAxes[0], immersiveAxes[1], immersiveAxes[2], immersiveAxes[3]);
         delegate->SetAxes(controller.index, immersiveAxes, kNumAxes);
       } else {
         const int32_t kNumAxes = 2;

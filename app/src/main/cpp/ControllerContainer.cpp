@@ -527,6 +527,8 @@ ControllerContainer::EndTouch(const int32_t aControllerIndex) {
     return;
   }
   m.list[aControllerIndex].touched = false;
+  m.list[aControllerIndex].touchX = 0;
+  m.list[aControllerIndex].touchY = 0;
 }
 
 void
