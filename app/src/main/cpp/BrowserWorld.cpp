@@ -538,8 +538,7 @@ BrowserWorld::State::UpdateControllers(bool& aRelayoutWidgets) {
         }
         const double ctime = context->GetTimestamp();
 
-        //VRB_ERROR("[FULLDIVE] VRBrowser::HandleScrollEvent [A](%d, %.2f, %.2f)", (int)controller.index, ScaleScrollDelta(controller.scrollDeltaX, controller.scrollStart, ctime),
-        ScaleScrollDelta(controller.scrollDeltaY, controller.scrollStart, ctime));
+        //VRB_ERROR("[FULLDIVE] VRBrowser::HandleScrollEvent [A](%d, %.2f, %.2f)", (int)controller.index, ScaleScrollDelta(controller.scrollDeltaX, controller.scrollStart, ctime), ScaleScrollDelta(controller.scrollDeltaY, controller.scrollStart, ctime));
         VRBrowser::HandleScrollEvent(controller.widget, controller.index,
                             ScaleScrollDelta(controller.scrollDeltaX, controller.scrollStart, ctime),
                             ScaleScrollDelta(controller.scrollDeltaY, controller.scrollStart, ctime));
@@ -555,8 +554,7 @@ BrowserWorld::State::UpdateControllers(bool& aRelayoutWidgets) {
           if (!controller.wasTouched) {
             controller.wasTouched = controller.touched;
           } else {
-            //VRB_ERROR("[FULLDIVE] VRBrowser::HandleScrollEvent [B](%d, %.2f, %.2f)", (int)controller.index, (controller.touchX - controller.lastTouchX) * kScrollFactor,
-              (controller.touchY - controller.lastTouchY) * kScrollFactor);
+            //VRB_ERROR("[FULLDIVE] VRBrowser::HandleScrollEvent [B](%d, %.2f, %.2f)", (int)controller.index, (controller.touchX - controller.lastTouchX) * kScrollFactor, (controller.touchY - controller.lastTouchY) * kScrollFactor);
             VRBrowser::HandleScrollEvent(controller.widget,
                                 controller.index,
                                 (controller.touchX - controller.lastTouchX) * kScrollFactor,
