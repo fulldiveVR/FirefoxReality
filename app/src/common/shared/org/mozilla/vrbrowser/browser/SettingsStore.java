@@ -83,9 +83,9 @@ public class SettingsStore {
     public final static boolean SPEECH_DATA_COLLECTION_DEFAULT = false;
     public final static boolean SPEECH_DATA_COLLECTION_REVIEWED_DEFAULT = false;
     public final static boolean SERVO_DEFAULT = false;
-    //MOHUS desktop mode by default
-    public final static int UA_MODE_DEFAULT = GeckoSessionSettings.USER_AGENT_MODE_DESKTOP;
-    //public final static int UA_MODE_DEFAULT = GeckoSessionSettings.USER_AGENT_MODE_VR;
+    //MOHUS desktop mode
+    //public final static int UA_MODE_DEFAULT = GeckoSessionSettings.USER_AGENT_MODE_DESKTOP;
+    public final static int UA_MODE_DEFAULT = GeckoSessionSettings.USER_AGENT_MODE_VR;
     public final static int INPUT_MODE_DEFAULT = 1;
     public final static float DISPLAY_DENSITY_DEFAULT = 1.0f;
     public final static int WINDOW_WIDTH_DEFAULT = 800;
@@ -344,7 +344,9 @@ public class SettingsStore {
 
     public void setUaMode(int mode) {
         int checkedMode = mode;
-        if ((mode != GeckoSessionSettings.USER_AGENT_MODE_VR) && (mode != GeckoSessionSettings.USER_AGENT_MODE_MOBILE) && (mode != GeckoSessionSettings.USER_AGENT_MODE_DESKTOP)) {
+        //MOHUS desktop mode
+        //if ((mode != GeckoSessionSettings.USER_AGENT_MODE_VR) && (mode != GeckoSessionSettings.USER_AGENT_MODE_MOBILE) && (mode != GeckoSessionSettings.USER_AGENT_MODE_DESKTOP)) {
+        if ((mode != GeckoSessionSettings.USER_AGENT_MODE_VR) && (mode != GeckoSessionSettings.USER_AGENT_MODE_MOBILE)) {
             Log.e(LOGTAG, "User agent mode: " + mode + " is not supported.");
             checkedMode = UA_MODE_DEFAULT;
         }
