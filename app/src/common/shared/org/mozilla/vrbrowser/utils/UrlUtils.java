@@ -32,6 +32,8 @@ public class UrlUtils {
 
     private static List<String> ENGINE_SUPPORTED_SCHEMES = Arrays.asList(null, "about", "data", "file", "ftp", "http", "https", "moz-extension", "moz-safe-about", "resource", "view-source", "ws", "wss", "blob");
 
+    private static String ourCachedHomePageStartPart = null;
+
     public static String stripCommonSubdomains(@Nullable String host) {
         if (host == null) {
             return null;
@@ -108,10 +110,23 @@ public class UrlUtils {
         return uri != null && uri.equals("data:text/html;base64," + Base64.encodeToString(privatePageBytes, Base64.NO_WRAP));
     }
 
+    public static boolean isHomeAboutPage(@Nullable Context context,  @Nullable String uri) {
+        if (ourCachedHomePageStartPart == null) {
+            InternalPages.PageResources pageResources = InternalPages.PageResources.create(R.raw.home_page, R.raw.home_style);
+            byte[] homePageBytes = InternalPages.createHomePage(context, pageResources);
+            String homePageFull = "data:text/html;base64," + Base64.encodeToString(homePageBytes, Base64.NO_WRAP);
+            ourCachedHomePageStartPart = homePageFull.substring(0,1024);
+        }
+        return uri != null && uri.startsWith(ourCachedHomePageStartPart);
+    }
+
     public static Boolean isHomeUri(@Nullable Context context, @Nullable String aUri) {
         return aUri != null && context != null && aUri.toLowerCase().startsWith(
                 SettingsStore.getInstance(context).getHomepage()
         );
+        //InternalPages.PageResources pageResources = InternalPages.PageResources.create(R.raw.home_page, R.raw.home_style);
+        //byte[] homePageBytes = InternalPages.createHomePage(context, pageResources);
+        //return aUri != null && aUri.equals("data:text/html;base64," + Base64.encodeToString(homePageBytes, Base64.NO_WRAP));
     }
 
     public static Boolean isDataUri(@Nullable String aUri) {
@@ -207,8 +222,15 @@ public class UrlUtils {
         return url != null && url.equalsIgnoreCase(ABOUT_PRIVATE);
     }
 
+    public static final String ABOUT_HOME = "about://home";
+
+    public static boolean isHomeUrl(@Nullable String url) {
+        return url != null && url.equalsIgnoreCase(ABOUT_HOME);
+    }
+
+
     public static boolean isAboutPage(@Nullable String url) {
-        return isHistoryUrl(url) || isBookmarksUrl(url) || isDownloadsUrl(url) || isAddonsUrl(url) || isPrivateUrl(url);
+        return isHistoryUrl(url) || isBookmarksUrl(url) || isDownloadsUrl(url) || isAddonsUrl(url) || isPrivateUrl(url) || isHomeUrl(url);
     }
 
     public static boolean isContentFeed(Context aContext, @Nullable String url) {

@@ -899,7 +899,7 @@ public class NavigationBarWidget extends UIWidget implements GeckoSession.Naviga
             updateTrackingProtection();
         }
 
-        mBinding.navigationBarNavigation.reloadButton.setEnabled(!UrlUtils.isPrivateAboutPage(getContext(), url));
+        mBinding.navigationBarNavigation.reloadButton.setEnabled(!UrlUtils.isPrivateAboutPage(getContext(), url) && !UrlUtils.isHomeAboutPage(getContext(), url));
     }
 
     // Content delegate

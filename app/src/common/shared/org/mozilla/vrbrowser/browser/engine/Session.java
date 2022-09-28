@@ -32,6 +32,7 @@ import org.mozilla.geckoview.GeckoSessionSettings;
 import org.mozilla.geckoview.MediaElement;
 import org.mozilla.geckoview.SlowScriptResponse;
 import org.mozilla.geckoview.WebRequestError;
+import org.mozilla.geckoview.WebExtension;
 import com.vive.browser.wave.R;
 import org.mozilla.vrbrowser.browser.Media;
 import org.mozilla.vrbrowser.browser.SessionChangeListener;
@@ -92,6 +93,7 @@ public class Session implements ContentBlocking.Delegate, GeckoSession.Navigatio
     private transient SharedPreferences mPrefs;
     private transient GeckoRuntime mRuntime;
     private transient byte[] mPrivatePage;
+    private transient byte[] mHomePage;
     private transient boolean mFirstContentfulPaint;
     private transient long mKeepAlive;
 
@@ -192,6 +194,10 @@ public class Session implements ContentBlocking.Delegate, GeckoSession.Navigatio
 
         InternalPages.PageResources pageResources = InternalPages.PageResources.create(R.raw.private_mode, R.raw.private_style);
         mPrivatePage = InternalPages.createAboutPage(mContext, pageResources);
+
+        InternalPages.PageResources pageResourcesHome = InternalPages.PageResources.create(R.raw.home_page, R.raw.home_style);
+        mHomePage = InternalPages.createHomePage(mContext, pageResourcesHome);
+        //Log.e(LOGTAG,"[FULLDIVE] mHomePage[].length = " + String.valueOf(mHomePage.length));
 
         if (sUserAgentOverride == null) {
             sUserAgentOverride = new UserAgentOverride();
@@ -882,8 +888,13 @@ public class Session implements ContentBlocking.Delegate, GeckoSession.Navigatio
     }
 
     public void loadUri(String aUri, int flags) {
+        //Log.e(LOGTAG,"[FULLDIVE] loadUri() aUri = "+aUri);
         if (aUri == null) {
             aUri = getHomeUri();
+        }
+        if (aUri.equalsIgnoreCase(getHomeUri())) {
+            loadHomePage();
+            return;
         }
         if (mState.mSession != null) {
             Log.d(LOGTAG, "Loading URI: " + aUri);
@@ -894,7 +905,15 @@ public class Session implements ContentBlocking.Delegate, GeckoSession.Navigatio
     }
 
     public void loadHomePage() {
-        loadUri(getHomeUri());
+        //loadUri(getHomeUri());
+        //Log.e(LOGTAG,"[FULLDIVE] loadHomePage()");
+        if (mState.mSession != null) {
+            if (mHomePage == null) {
+                //Log.e(LOGTAG,"[FULLDIVE] mHomePage[] == null");
+            }
+            //Log.e(LOGTAG,"[FULLDIVE] mHomePage[],length = " + String.valueOf(mHomePage.length));
+            mState.mSession.loadData(mHomePage, "text/html");
+        }
     }
 
     public void loadPrivateBrowsingPage() {

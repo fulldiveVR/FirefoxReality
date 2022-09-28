@@ -236,7 +236,10 @@ public class WindowViewModel extends AndroidViewModel {
                         (UrlUtils.isDataUri(url) && isPrivateSession.getValue().get())) {
                     url = getApplication().getString(R.string.private_browsing_title);
 
-                } else if (UrlUtils.isHomeUri(getApplication(), aUrl.toString())) {
+                } else if (UrlUtils.isHomeAboutPage(getApplication(), url)) {
+                    url = getApplication().getString(R.string.url_home_title, getApplication().getString(R.string.app_name));
+
+                }else if (UrlUtils.isHomeUri(getApplication(), aUrl.toString())) {
                     url = getApplication().getString(R.string.url_home_title, getApplication().getString(R.string.app_name));
 
                 } else if (UrlUtils.isWebExtensionUrl(aUrl.toString())) {
@@ -257,6 +260,7 @@ public class WindowViewModel extends AndroidViewModel {
             String aUrl = url.getValue().toString();
             if (isInsecure.getValue().get()) {
                 if (UrlUtils.isPrivateAboutPage(getApplication(), aUrl) ||
+                        UrlUtils.isHomeAboutPage(getApplication(), aUrl) ||
                         (UrlUtils.isDataUri(aUrl) && isPrivateSession.getValue().get()) ||
                         UrlUtils.isFileUri(aUrl) ||
                         UrlUtils.isHomeUri(getApplication(), aUrl) ||
@@ -279,6 +283,7 @@ public class WindowViewModel extends AndroidViewModel {
         public void onChanged(Spannable aUrl) {
             String url = aUrl.toString();
             if (UrlUtils.isPrivateAboutPage(getApplication(), url) ||
+                    UrlUtils.isHomeAboutPage(getApplication(), url) ||
                     (UrlUtils.isDataUri(url) && isPrivateSession.getValue().get()) ||
                     UrlUtils.isHomeUri(getApplication(), aUrl.toString()) ||
                     isLibraryVisible.getValue().get() ||
@@ -300,6 +305,7 @@ public class WindowViewModel extends AndroidViewModel {
                             !isLibraryVisible.getValue().get() &&
                             !UrlUtils.isContentFeed(getApplication(), aUrl) &&
                             !UrlUtils.isPrivateAboutPage(getApplication(), aUrl) &&
+                            !UrlUtils.isHomeAboutPage(getApplication(), aUrl) &&
                             (URLUtil.isHttpUrl(aUrl) || URLUtil.isHttpsUrl(aUrl)) &&
                             (
                                     (SettingsStore.getInstance(getApplication()).getTrackingProtectionLevel() != ContentBlocking.EtpLevel.NONE) ||
