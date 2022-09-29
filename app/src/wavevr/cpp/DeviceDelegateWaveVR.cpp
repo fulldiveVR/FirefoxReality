@@ -39,6 +39,12 @@
 #include <wvr/wvr_arena.h>
 #include <wvr/wvr_ctrller_render_model.h>
 
+
+#define SCALE_FACTOR_VIEWPORT 1.0f
+#define SCALE_FACTOR_IMMERSIVE 1.0f
+#define SCALE_FACTOR_TEXTURE 1.0f
+#define SCALE_FACTOR_NATIVE 1.0f
+
 namespace crow {
 
 static const vrb::Vector kAverageHeight(0.0f, 1.7f, 0.0f);
@@ -231,14 +237,15 @@ struct DeviceDelegateWaveVR::State {
 
   void InitializeRender() {
     WVR_GetRenderTargetSize(&renderWidth, &renderHeight);
-    VRB_GL_CHECK(glViewport(0, 0, renderWidth, renderHeight));
+    VRB_GL_CHECK(glViewport(0, 0, renderWidth*SCALE_FACTOR_VIEWPORT, renderHeight*SCALE_FACTOR_VIEWPORT));
     VRB_DEBUG("Recommended size is %ux%u", renderWidth, renderHeight);
     if (renderWidth == 0 || renderHeight == 0) {
       VRB_ERROR("Please check Wave server configuration");
       return;
     }
     if (immersiveDisplay) {
-      immersiveDisplay->SetEyeResolution(renderWidth, renderHeight);
+      immersiveDisplay->SetEyeResolution(renderWidth*SCALE_FACTOR_IMMERSIVE, renderHeight*SCALE_FACTOR_IMMERSIVE);
+      immersiveDisplay->SetNativeFramebufferScaleFactor(SCALE_FACTOR_NATIVE);
     }
     InitializeTextureQueues();
   }
@@ -246,9 +253,9 @@ struct DeviceDelegateWaveVR::State {
   void InitializeTextureQueues() {
     ReleaseTextureQueues();
     VRB_LOG("Create texture queues: %dx%d", renderWidth, renderHeight);
-    leftTextureQueue = WVR_ObtainTextureQueue(WVR_TextureTarget_2D, WVR_TextureFormat_RGBA, WVR_TextureType_UnsignedByte, renderWidth, renderHeight, 0);
+    leftTextureQueue = WVR_ObtainTextureQueue(WVR_TextureTarget_2D, WVR_TextureFormat_RGBA, WVR_TextureType_UnsignedByte, renderWidth*SCALE_FACTOR_TEXTURE, renderHeight*SCALE_FACTOR_TEXTURE, 0);
     FillFBOQueue(leftTextureQueue, leftFBOQueue);
-    rightTextureQueue = WVR_ObtainTextureQueue(WVR_TextureTarget_2D, WVR_TextureFormat_RGBA, WVR_TextureType_UnsignedByte, renderWidth, renderHeight, 0);
+    rightTextureQueue = WVR_ObtainTextureQueue(WVR_TextureTarget_2D, WVR_TextureFormat_RGBA, WVR_TextureType_UnsignedByte, renderWidth*SCALE_FACTOR_TEXTURE, renderHeight*SCALE_FACTOR_TEXTURE, 0);
     FillFBOQueue(rightTextureQueue, rightFBOQueue);
   }
 
@@ -617,7 +624,7 @@ DeviceDelegateWaveVR::RegisterImmersiveDisplay(ImmersiveDisplayPtr aDisplay) {
   }
 
   m.immersiveDisplay->SetCapabilityFlags(flags);
-  m.immersiveDisplay->SetEyeResolution(m.renderWidth, m.renderHeight);
+  m.immersiveDisplay->SetEyeResolution(m.renderWidth*SCALE_FACTOR_IMMERSIVE, m.renderHeight*SCALE_FACTOR_IMMERSIVE);
   m.UpdateStandingMatrix();
   m.UpdateBoundary();
   m.InitializeCameras();
@@ -975,7 +982,7 @@ DeviceDelegateWaveVR::BindEye(const device::Eye aWhich) {
   }
   if (m.currentFBO) {
     m.currentFBO->Bind();
-    VRB_GL_CHECK(glViewport(0, 0, m.renderWidth, m.renderHeight));
+    VRB_GL_CHECK(glViewport(0, 0, m.renderWidth*SCALE_FACTOR_VIEWPORT, m.renderHeight*SCALE_FACTOR_VIEWPORT));
     VRB_GL_CHECK(glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT));
   } else {
     VRB_ERROR("No FBO found");
