@@ -1,16 +1,22 @@
 package org.mozilla.vrbrowser.ui.views.home;
 
+import static org.mozilla.gecko.util.ThreadUtils.runOnUiThread;
+
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.os.Handler;
 import android.util.AttributeSet;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.JavascriptInterface;
+import android.webkit.WebChromeClient;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 
@@ -33,6 +39,7 @@ import org.mozilla.vrbrowser.ui.widgets.WindowWidget;
 import org.mozilla.vrbrowser.ui.widgets.Windows;
 import org.mozilla.vrbrowser.utils.InternalPages;
 
+import java.io.ByteArrayOutputStream;
 import java.util.concurrent.Executor;
 
 
@@ -320,9 +327,90 @@ public class HomePanel extends FrameLayout {
         }
 
         @JavascriptInterface
-        public String getFavicon(String url)
+        public void getFavicon(String page_url)
         {
-            return "";
+            runOnUiThread(new Runnable() {
+                public void run2() {
+                    WebView wv = new WebView(getContext());
+                    wv.setWebChromeClient(new WebChromeClient() {
+                        @Override
+                        public void onReceivedIcon(WebView view, Bitmap icon) {
+                            super.onReceivedIcon(view, icon);
+                            Bitmap favicon  = icon;
+                            if (favicon != null) {
+                                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                                favicon.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                                byte[] byteArray = stream.toByteArray();
+                                favicon.recycle();
+                                String favicon_data_string = "data:image/png;base64," + Base64.encodeToString(byteArray, Base64.NO_WRAP);
+                                final String js_code = "onFaviconLoaded(\""+page_url+"\", \""+favicon_data_string+"\");";
+
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        mBinding.webview.evaluateJavascript(js_code, null);
+                                    }
+                                });
+
+                            }
+
+                        }
+                    });
+                    wv.loadUrl(page_url);
+                }
+
+                private boolean processIcon(WebView view) {
+                    Bitmap favicon  = view.getFavicon();
+                    if (favicon != null) {
+                        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                        favicon.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                        byte[] byteArray = stream.toByteArray();
+                        favicon.recycle();
+                        String favicon_data_string = "data:image/png;base64," + Base64.encodeToString(byteArray, Base64.NO_WRAP);
+                        final String js_code = "onFaviconLoaded(\""+page_url+"\", \""+favicon_data_string+"\");";
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                mBinding.webview.evaluateJavascript(js_code, null);
+                            }
+                        });
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+
+
+                @Override
+                public void run() {
+                    WebView wv = new WebView(getContext());
+                    wv.setWebViewClient(new WebViewClient() {
+                        @Override
+                        public void onPageFinished(WebView view, String url) {
+                            if (!processIcon(view)) {
+                                Handler h = new Handler();
+                                h.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        if (!processIcon(view)) {
+                                            Handler h = new Handler();
+                                            h.postDelayed(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    processIcon(view);
+                                                }
+                                            }, 1000);
+                                        }
+                                    }
+                                }, 250);
+                            }
+                        }
+                    });
+                    wv.loadUrl(page_url);
+                }
+            });
         }
 
     }

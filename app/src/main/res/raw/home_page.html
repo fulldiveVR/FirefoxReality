@@ -443,13 +443,31 @@
                     shortcuts = JSON.parse(storage.getItem(KEY_SHORTCUTS));
                 } catch (err) {
                     storage.setItem(KEY_SHORTCUTS, JSON.stringify(DEFAULT_SHORTCUTS));
-                    shortcuts = JSON.parse(storage.getItem(KEY_SHORTCUTS))q;
+                    shortcuts = JSON.parse(storage.getItem(KEY_SHORTCUTS));
                 }
                 renderShortcuts(shortcuts)
             } catch
                 (err) {
                 console.log("Error while parse shortcuts: " + err);
             }
+        }
+
+
+        function onFaviconLoaded(icon_url, favicon_as_data_prepared) {
+            const storage = LocalStorage;
+            try {
+                shortcuts = JSON.parse(storage.getItem(KEY_SHORTCUTS));
+            } catch (err) {
+                storage.setItem(KEY_SHORTCUTS, JSON.stringify(DEFAULT_SHORTCUTS));
+                shortcuts = JSON.parse(storage.getItem(KEY_SHORTCUTS));
+            }
+            shortcuts.forEach((element) => {
+                if (element.url === icon_url) {
+                    element.icon = favicon_as_data_prepared;
+                }
+            });
+            storage.setItem(KEY_SHORTCUTS, JSON.stringify(shortcuts));
+            updateShortcuts();
         }
 
         updateShortcuts()
@@ -505,6 +523,7 @@
                 savedShortcuts.push(shortcut);
 
                 storage.setItem(KEY_SHORTCUTS, JSON.stringify(savedShortcuts));
+                Fulldive.getFavicon(url);
                 closeAddShortCutPopup();
                 update();
             } catch (err) {
@@ -530,6 +549,7 @@
                 };
                 const updatedShortcuts = savedShortcuts.map(item => item.name === shortcutName ? shortcut : item);
                 storage.setItem(KEY_SHORTCUTS, JSON.stringify(updatedShortcuts));
+                Fulldive.getFavicon(url);
                 closeEditShortcutPopup();
                 update();
             } catch (err) {
