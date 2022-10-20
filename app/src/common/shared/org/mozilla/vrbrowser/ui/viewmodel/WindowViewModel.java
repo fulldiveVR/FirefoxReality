@@ -46,6 +46,7 @@ public class WindowViewModel extends AndroidViewModel {
     private MutableLiveData<ObservableBoolean> isActiveWindow;
     private MediatorLiveData<ObservableBoolean> isTitleBarVisible;
     private MutableLiveData<ObservableBoolean> isLibraryVisible;
+    private MutableLiveData<ObservableBoolean> isHomeVisible;
     private MutableLiveData<ObservableBoolean> isLoading;
     private MutableLiveData<ObservableBoolean> isMicrophoneEnabled;
     private MutableLiveData<ObservableBoolean> isBookmarked;
@@ -119,6 +120,7 @@ public class WindowViewModel extends AndroidViewModel {
         isTitleBarVisible.setValue(new ObservableBoolean(true));
 
         isLibraryVisible = new MutableLiveData<>(new ObservableBoolean(false));
+        isHomeVisible = new MutableLiveData<>(new ObservableBoolean(false));
 
         isLoading = new MutableLiveData<>(new ObservableBoolean(false));
         isMicrophoneEnabled = new MutableLiveData<>(new ObservableBoolean(true));
@@ -228,11 +230,22 @@ public class WindowViewModel extends AndroidViewModel {
         @Override
         public void onChanged(Spannable aUrl) {
             String url = aUrl.toString();
+            if (UrlUtils.isHomeAboutPage(getApplication(), url)) {
+                url = getApplication().getString(R.string.url_home_title, getApplication().getString(R.string.app_name));
+            }
+            else
             if (isLibraryVisible.getValue().get()) {
                 url = getApplication().getString(R.string.url_library_title);
 
-            } else {
-                if (UrlUtils.isPrivateAboutPage(getApplication(), url) ||
+            }
+            else
+            if (isHomeVisible.getValue().get()) {
+                url = getApplication().getString(R.string.url_home_title, getApplication().getString(R.string.app_name));
+            }
+            else {
+                if (UrlUtils.isPrehomeUri(getApplication(), url)) {
+                    url = getApplication().getString(R.string.url_home_title, getApplication().getString(R.string.app_name));
+                } else if (UrlUtils.isPrivateAboutPage(getApplication(), url) ||
                         (UrlUtils.isDataUri(url) && isPrivateSession.getValue().get())) {
                     url = getApplication().getString(R.string.private_browsing_title);
 
@@ -250,6 +263,7 @@ public class WindowViewModel extends AndroidViewModel {
                 }
             }
 
+            //titleBarUrl.setValue(UrlUtils.titleBarUrl(url));
             titleBarUrl.postValue(UrlUtils.titleBarUrl(url));
         }
     };
@@ -265,6 +279,7 @@ public class WindowViewModel extends AndroidViewModel {
                         UrlUtils.isFileUri(aUrl) ||
                         UrlUtils.isHomeUri(getApplication(), aUrl) ||
                         isLibraryVisible.getValue().get() ||
+                        isHomeVisible.getValue().get() ||
                         UrlUtils.isBlankUri(getApplication(), aUrl)) {
                     isInsecureVisible.postValue(new ObservableBoolean(false));
 
@@ -287,6 +302,7 @@ public class WindowViewModel extends AndroidViewModel {
                     (UrlUtils.isDataUri(url) && isPrivateSession.getValue().get()) ||
                     UrlUtils.isHomeUri(getApplication(), aUrl.toString()) ||
                     isLibraryVisible.getValue().get() ||
+                    isHomeVisible.getValue().get() ||
                     UrlUtils.isBlankUri(getApplication(), aUrl.toString())) {
                 navigationBarUrl.postValue("");
 
@@ -303,6 +319,7 @@ public class WindowViewModel extends AndroidViewModel {
             isUrlBarButtonsVisible.postValue(new ObservableBoolean(
                     !isFocused.getValue().get() &&
                             !isLibraryVisible.getValue().get() &&
+                            !isHomeVisible.getValue().get() &&
                             !UrlUtils.isContentFeed(getApplication(), aUrl) &&
                             !UrlUtils.isPrivateAboutPage(getApplication(), aUrl) &&
                             !UrlUtils.isHomeAboutPage(getApplication(), aUrl) &&
@@ -323,6 +340,7 @@ public class WindowViewModel extends AndroidViewModel {
         public void onChanged(ObservableBoolean o) {
             isUrlBarIconsVisible.postValue(new ObservableBoolean(
                     !isLibraryVisible.getValue().get() &&
+                            !isHomeVisible.getValue().get() &&
                             (isLoading.getValue().get() ||
                                     isInsecureVisible.getValue().get())
             ));
@@ -435,7 +453,11 @@ public class WindowViewModel extends AndroidViewModel {
         if (isLibraryVisible.getValue().get()) {
             return getApplication().getString(R.string.url_library_title);
 
-        } else {
+        } else
+        if (isHomeVisible.getValue().get()) {
+            return getApplication().getString(R.string.url_home_title, getApplication().getString(R.string.app_name));
+        }
+        else{
             return getApplication().getString(R.string.search_placeholder);
         }
     }
@@ -544,10 +566,21 @@ public class WindowViewModel extends AndroidViewModel {
         setIsLibraryVisible(isVisible);
     }
 
+    public void setIsHomeVisible(boolean isHomeVisible) {
+        this.isHomeVisible.postValue(new ObservableBoolean(isHomeVisible));
+        this.url.postValue(this.getUrl().getValue());
+    }
+
     @NonNull
     public MutableLiveData<ObservableBoolean> getIsLibraryVisible() {
         return isLibraryVisible;
     }
+
+    @NonNull
+    public MutableLiveData<ObservableBoolean> getIsHomeVisible() {
+        return isHomeVisible;
+    }
+
 
     @NonNull
     public MutableLiveData<ObservableBoolean> getIsLoading() {

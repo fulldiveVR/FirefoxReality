@@ -263,7 +263,7 @@ public class NavigationBarWidget extends UIWidget implements GeckoSession.Naviga
             if (mAudio != null) {
                 mAudio.playSound(AudioEngine.Sound.CLICK);
             }
-            mNavigationListeners.forEach(NavigationListener::onHome);
+            //mNavigationListeners.forEach(NavigationListener::onHome);
         });
 
 
@@ -900,6 +900,11 @@ public class NavigationBarWidget extends UIWidget implements GeckoSession.Naviga
         }
 
         mBinding.navigationBarNavigation.reloadButton.setEnabled(!UrlUtils.isPrivateAboutPage(getContext(), url) && !UrlUtils.isHomeAboutPage(getContext(), url));
+        if (UrlUtils.isHomeAboutPage(getContext(), url)) {
+            String home_url = getContext().getString(R.string.url_home_title, getContext().getString(R.string.app_name));
+            mViewModel.setUrl(home_url);
+            mBinding.navigationBarNavigation.urlBar.setText(home_url);
+        }
     }
 
     // Content delegate

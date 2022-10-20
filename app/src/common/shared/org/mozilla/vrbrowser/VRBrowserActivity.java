@@ -603,7 +603,7 @@ public class VRBrowserActivity extends PlatformActivity implements WidgetManager
             if (extras.containsKey("background")) {
                 openInBackground = extras.getBoolean("background", false);
                 if (uri == null) {
-                    uri = Uri.parse(SettingsStore.getInstance(this).getHomepage());
+                    uri = Uri.parse(WindowWidget.PREHOME_URL/*SettingsStore.getInstance(this).getHomepage()*/);
                 }
             }
 
@@ -611,7 +611,7 @@ public class VRBrowserActivity extends PlatformActivity implements WidgetManager
             if (extras.containsKey("create_new_window")) {
                 openInWindow = extras.getBoolean("create_new_window", false);
                 if (uri == null) {
-                    uri = Uri.parse(SettingsStore.getInstance(this).getHomepage());
+                    uri = Uri.parse(WindowWidget.PREHOME_URL/*SettingsStore.getInstance(this).getHomepage()*/);
                 }
             }
 

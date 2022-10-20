@@ -43,6 +43,7 @@ import org.mozilla.vrbrowser.browser.content.TrackingProtectionPolicy;
 import org.mozilla.vrbrowser.browser.content.TrackingProtectionStore;
 import org.mozilla.vrbrowser.geolocation.GeolocationData;
 import org.mozilla.vrbrowser.telemetry.GleanMetricsService;
+import org.mozilla.vrbrowser.ui.widgets.WindowWidget;
 import org.mozilla.vrbrowser.utils.BitmapCache;
 import org.mozilla.vrbrowser.utils.InternalPages;
 import org.mozilla.vrbrowser.utils.SystemUtils;
@@ -736,11 +737,15 @@ public class Session implements ContentBlocking.Delegate, GeckoSession.Navigatio
         if (homepage.equals(mContext.getString(R.string.homepage_url)) && mState.mRegion != null) {
             homepage = homepage + "?region=" + mState.mRegion;
         }
-        return homepage;
+        return homepage;//WindowWidget.PREHOME_URL;//homepage;
     }
 
     public Boolean isHomeUri(String aUri) {
         return UrlUtils.isHomeUri(mContext, aUri);
+    }
+
+    public Boolean isPreHomeUri(String aUri) {
+        return UrlUtils.isPrehomeUri(mContext, aUri);
     }
 
     public String getCurrentUri() {
@@ -890,12 +895,12 @@ public class Session implements ContentBlocking.Delegate, GeckoSession.Navigatio
     public void loadUri(String aUri, int flags) {
         //Log.e(LOGTAG,"[FULLDIVE] loadUri() aUri = "+aUri);
         if (aUri == null) {
-            aUri = getHomeUri();
+            aUri = WindowWidget.PREHOME_URL;//getHomeUri();
         }
-        if (aUri.equalsIgnoreCase(getHomeUri())) {
-            loadHomePage();
-            return;
-        }
+        //if (aUri.equalsIgnoreCase(getHomeUri())) {
+        //    loadHomePage();
+        //    return;
+        //}
         if (mState.mSession != null) {
             Log.d(LOGTAG, "Loading URI: " + aUri);
             if (mExternalRequestDelegate == null || !mExternalRequestDelegate.onHandleExternalRequest(aUri)) {
@@ -905,15 +910,21 @@ public class Session implements ContentBlocking.Delegate, GeckoSession.Navigatio
     }
 
     public void loadHomePage() {
-        //loadUri(getHomeUri());
+        //loadUri("http://unknownlocalurl.com");
+        loadUri(getHomeUri());
+        //loadUri(WindowWidget.PREHOME_URL);
+
+
+
+
         //Log.e(LOGTAG,"[FULLDIVE] loadHomePage()");
-        if (mState.mSession != null) {
-            if (mHomePage == null) {
+        //if (mState.mSession != null) {
+        //    if (mHomePage == null) {
                 //Log.e(LOGTAG,"[FULLDIVE] mHomePage[] == null");
-            }
+        //    }
             //Log.e(LOGTAG,"[FULLDIVE] mHomePage[],length = " + String.valueOf(mHomePage.length));
-            mState.mSession.loadData(mHomePage, "text/html");
-        }
+        //    mState.mSession.loadData(mHomePage, "text/html");
+        //}
     }
 
     public void loadPrivateBrowsingPage() {

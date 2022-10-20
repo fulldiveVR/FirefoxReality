@@ -111,6 +111,7 @@ public class UrlUtils {
     }
 
     public static boolean isHomeAboutPage(@Nullable Context context,  @Nullable String uri) {
+        /*
         if (ourCachedHomePageStartPart == null) {
             InternalPages.PageResources pageResources = InternalPages.PageResources.create(R.raw.home_page, R.raw.home_style);
             byte[] homePageBytes = InternalPages.createHomePage(context, pageResources);
@@ -118,6 +119,8 @@ public class UrlUtils {
             ourCachedHomePageStartPart = homePageFull.substring(0,1024);
         }
         return uri != null && uri.startsWith(ourCachedHomePageStartPart);
+         */
+        return isHomeUri(context, uri) || isPrehomeUri(context, uri);
     }
 
     public static Boolean isHomeUri(@Nullable Context context, @Nullable String aUri) {
@@ -127,6 +130,11 @@ public class UrlUtils {
         //InternalPages.PageResources pageResources = InternalPages.PageResources.create(R.raw.home_page, R.raw.home_style);
         //byte[] homePageBytes = InternalPages.createHomePage(context, pageResources);
         //return aUri != null && aUri.equals("data:text/html;base64," + Base64.encodeToString(homePageBytes, Base64.NO_WRAP));
+    }
+
+    public static Boolean isPrehomeUri(@Nullable Context context, @Nullable String aUri) {
+        String prehome_url = InternalPages.makePreHomePageURL(context);
+        return aUri != null && context != null && aUri.equalsIgnoreCase(prehome_url);
     }
 
     public static Boolean isDataUri(@Nullable String aUri) {

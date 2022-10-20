@@ -339,6 +339,12 @@ public class NavigationURLBar extends FrameLayout {
         return mBinding.urlEditText.getText().toString();
     }
 
+    public void setText(String text) {
+        mBinding.urlEditText.getText().clear();
+        mBinding.urlEditText.getText().append(text);
+        mBinding.notifyChange();
+    }
+
     public String getOriginalText() {
         try {
             return mBinding.urlEditText.getOriginalText();

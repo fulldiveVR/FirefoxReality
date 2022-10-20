@@ -174,6 +174,21 @@ public class InternalPages {
         return html.getBytes();
     }
 
+    public static String makeHomePageURL(Context context) {
+        PageResources resources = InternalPages.PageResources.create(R.raw.home_page, R.raw.home_style);
+        String html = readRawResourceString(context, resources.html);
+        //return html.getBytes();
+        return "data:text/html;base64," + Base64.encodeToString(html.getBytes(), Base64.NO_WRAP);
+    }
+
+    public static String makePreHomePageURL(Context context) {
+        PageResources resources = InternalPages.PageResources.create(R.raw.prehome, R.raw.home_style);
+        String html = readRawResourceString(context, resources.html);
+        //return html.getBytes();
+        return "data:text/html;base64," + Base64.encodeToString(html.getBytes(), Base64.NO_WRAP);
+    }
+
+
 
     private static String readRawResourceString(Context context, int resource) {
         StringBuilder total = new StringBuilder();
