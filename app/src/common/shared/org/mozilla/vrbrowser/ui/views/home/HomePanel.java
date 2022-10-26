@@ -401,10 +401,10 @@ public class HomePanel extends FrameLayout {
                                                 public void run() {
                                                     processIcon(view);
                                                 }
-                                            }, 1000);
+                                            }, 2000);
                                         }
                                     }
-                                }, 250);
+                                }, 500);
                             }
                         }
                     });
